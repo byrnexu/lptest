@@ -287,24 +287,24 @@ def mint_v3_position(
     try:
         # 初始化Web3
         w3 = Web3(Web3.HTTPProvider(BSC_NODE_URL))
-        
+
         # 导入Decimal
         from decimal import Decimal, ROUND_DOWN
-        
+
         # 获取代币地址和精度
         token0_address = get_token_address(token0_name)
         token1_address = get_token_address(token1_name)
-        
+
         # 确保代币地址按字典序排序
         if int(token0_address, 16) > int(token1_address, 16):
             token0_address, token1_address = token1_address, token0_address
             token0_name, token1_name = token1_name, token0_name
             amount0_desired, amount1_desired = amount1_desired, amount0_desired
-        
+
         print(f"\n代币信息:")
         print(f"Token0 ({token0_name}): {token0_address}")
         print(f"Token1 ({token1_name}): {token1_address}")
-        
+
         # 创建代币合约实例
         token0_contract = w3.eth.contract(
             address=Web3.to_checksum_address(token0_address),
@@ -314,27 +314,27 @@ def mint_v3_position(
             address=Web3.to_checksum_address(token1_address),
             abi=ERC20_ABI
         )
-        
+
         # 获取代币精度
         token0_decimals = token0_contract.functions.decimals().call()
         token1_decimals = token1_contract.functions.decimals().call()
-        
+
         print(f"\n代币精度:")
         print(f"Token0 ({token0_name}): {token0_decimals}")
         print(f"Token1 ({token1_name}): {token1_decimals}")
-        
+
         # 获取当前价格
         pool_address, current_price, is_initialized, sorted_token0_name, sorted_token1_name, sqrt_price_x96, tick = get_v3_pool_price(token0_name, token1_name, fee_percent)
         if not pool_address:
             raise ValueError(f"无法获取{token0_name}/{token1_name}池子")
-            
+
         if not is_initialized:
             raise ValueError(f"池子尚未初始化，需要先初始化池子")
-            
+
         print(f"\n池子已经初始化，池子信息:")
         print(f"池子地址: {pool_address}")
         print(f"当前价格: {current_price:.8f} {sorted_token1_name}")
-        
+
         # 直接使用返回的tick计算tick范围
         tick_range = int(abs(tick) * price_range_percent / 100)  # 计算tick范围
         # 对于负tick，我们需要调整计算方式
@@ -344,34 +344,34 @@ def mint_v3_position(
         else:
             tick_lower = tick - tick_range  # 更小的tick值对应更低的价格
             tick_upper = tick + tick_range  # 更大的tick值对应更高的价格
-            
+
         # 确保tick范围是60的倍数（PancakeSwap V3的要求）
         tick_lower = (tick_lower // 60) * 60
         tick_upper = (tick_upper // 60) * 60
-        
+
         print(f"\nTick范围:")
         print(f"当前Tick: {tick}")
         print(f"Tick下限: {tick_lower}")
         print(f"Tick上限: {tick_upper}")
-        
+
         # 确保tick范围有效
         if tick_lower >= tick_upper:
             raise ValueError(f"无效的tick范围: {tick_lower} >= {tick_upper}")
-            
+
         # 确保tick范围在合约允许的范围内
         MIN_TICK = -887272
         MAX_TICK = 887272
         if tick_lower < MIN_TICK or tick_upper > MAX_TICK:
             raise ValueError(f"tick范围超出限制: {MIN_TICK} <= tick <= {MAX_TICK}")
-        
+
         # 转换期望数量为wei（使用Decimal确保精度）
         amount0_desired_wei = int(Decimal(str(amount0_desired)) * Decimal(10 ** token0_decimals))
         amount1_desired_wei = int(Decimal(str(amount1_desired)) * Decimal(10 ** token1_decimals))
-        
+
         # 计算最小数量（考虑滑点，使用Decimal确保精度）
         amount0_min = int(Decimal(str(amount0_desired)) * (Decimal('1') - Decimal(str(slippage_percent)) / Decimal('100')) * Decimal(10 ** token0_decimals))
         amount1_min = int(Decimal(str(amount1_desired)) * (Decimal('1') - Decimal(str(slippage_percent)) / Decimal('100')) * Decimal(10 ** token1_decimals))
-        
+
         print(f"\n数量信息:")
         print(f"Token0 ({token0_name}):")
         print(f"  期望数量: {amount0_desired_wei} (wei)")
@@ -379,20 +379,20 @@ def mint_v3_position(
         print(f"Token1 ({token1_name}):")
         print(f"  期望数量: {amount1_desired_wei} (wei)")
         print(f"  最小数量: {amount1_min} (wei)")
-        
+
         # 计算deadline
         deadline = int((datetime.now() + timedelta(minutes=deadline_minutes)).timestamp())
-        
+
         # 加载PositionManager ABI
         with open("ABI/NonfungiblePositionManager.json", "r") as f:
             POSITION_MANAGER_ABI = json.load(f)
-            
+
         # 创建PositionManager合约实例
         position_manager = w3.eth.contract(
             address=Web3.to_checksum_address(POSITION_MANAGER),
             abi=POSITION_MANAGER_ABI
         )
-        
+
         # 准备mint参数
         fee = int(Decimal(str(fee_percent)) * Decimal('10000'))  # 转换为合约使用的格式
         mint_params = {
