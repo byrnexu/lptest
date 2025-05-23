@@ -5,6 +5,7 @@ import signal
 import sys
 from tqdm import tqdm
 from decimal import Decimal
+import math
 
 # BSC节点URL
 BSC_NODE_URL = "https://bsc-dataseed.binance.org/"
@@ -102,37 +103,61 @@ def format_amount(amount: int, decimals: int) -> str:
     """格式化代币数量，考虑精度"""
     return str(Decimal(amount) / Decimal(10 ** decimals))
 
+def calculate_liquidity_amounts(liquidity: int, sqrt_price_x96: int, tick: int) -> Tuple[float, float]:
+    """计算当前价格下的代币数量"""
+    # 将sqrt_price_x96转换为实际价格
+    price = (Decimal(sqrt_price_x96) ** 2) / (Decimal(2) ** 192)
+    sqrt_price = math.sqrt(float(price))
+
+    # 计算当前tick对应的价格范围
+    tick_lower = tick - 1
+    tick_upper = tick + 1
+    price_lower = 1.0001 ** tick_lower
+    price_upper = 1.0001 ** tick_upper
+    sqrt_price_lower = math.sqrt(price_lower)
+    sqrt_price_upper = math.sqrt(price_upper)
+
+    # 计算代币数量
+    # 使用V3的流动性计算公式
+    amount0 = float(liquidity) * (1/sqrt_price - 1/sqrt_price_upper)
+    amount1 = float(liquidity) * (sqrt_price - sqrt_price_lower)
+
+    return amount0, amount1
+
 def get_pool_details(pool_address: str, w3: Web3) -> Dict:
     """获取池子的详细信息"""
     try:
         # 创建池子合约实例
         pool = w3.eth.contract(address=Web3.to_checksum_address(pool_address), abi=POOL_ABI)
-        
+
         # 获取基本信息
         token0 = pool.functions.token0().call()
         token1 = pool.functions.token1().call()
         fee = pool.functions.fee().call()
-        
+
         # 获取当前价格信息
         slot0 = pool.functions.slot0().call()
         sqrt_price_x96 = slot0[0]
         tick = slot0[1]
-        
+
         # 获取流动性信息
         liquidity = pool.functions.liquidity().call()
-        
+
         # 获取协议费用信息
         protocol_fees = pool.functions.protocolFees().call()
-        
+
         # 获取代币符号和精度
         token0_symbol = get_token_symbol(token0)
         token1_symbol = get_token_symbol(token1)
         token0_decimals = get_token_decimals(token0, w3)
         token1_decimals = get_token_decimals(token1, w3)
-        
+
         # 计算实际价格
         price = (Decimal(sqrt_price_x96) ** 2) / (Decimal(2) ** 192)
-        
+
+        # 计算当前价格下的代币数量
+        amount0, amount1 = calculate_liquidity_amounts(liquidity, sqrt_price_x96, tick)
+
         return {
             "address": pool_address,
             "token0": {
@@ -149,6 +174,10 @@ def get_pool_details(pool_address: str, w3: Web3) -> Dict:
             "current_price": float(price),
             "tick": tick,
             "liquidity": liquidity,
+            "current_amounts": {
+                "token0": amount0,
+                "token1": amount1
+            },
             "protocol_fees": {
                 "token0": protocol_fees[0],
                 "token1": protocol_fees[1]
@@ -166,7 +195,7 @@ def get_pool_info(token0_address: str, token1_address: str) -> List[Tuple[str, s
     factory = w3.eth.contract(address=Web3.to_checksum_address(PANCAKESWAP_V3_FACTORY), abi=FACTORY_ABI)
 
     # 生成费率列表：从0.01%到1%，步长0.05%
-    fee_tiers = [1] + [int(fee * 500) for fee in range(1, 21)]  # 1(0.01%) + 5到100(0.05%到1%)
+    fee_tiers = [100] + [int(fee * 500) for fee in range(1, 21)]  # 1(0.01%) + 5到100(0.05%到1%)
 
     pools = []
     # 使用tqdm创建进度条
@@ -236,7 +265,10 @@ def main():
             print(f"费率: {pool['fee']}%")
             print(f"当前价格: {pool['current_price']}")
             print(f"当前Tick: {pool['tick']}")
-            print(f"流动性: {pool['liquidity']}")
+            print(f"流动性: {pool['liquidity']} (当前价格下的估算代币数量)")
+            print(f"当前价格下的代币数量:")
+            print(f"  - {pool['token0']['symbol']}: {format_amount(pool['current_amounts']['token0'], pool['token0']['decimals'])}")
+            print(f"  - {pool['token1']['symbol']}: {format_amount(pool['current_amounts']['token1'], pool['token1']['decimals'])}")
             print(f"累积的协议费用:")
             print(f"  - {pool['token0']['symbol']}: {format_amount(pool['protocol_fees']['token0'], pool['token0']['decimals'])}")
             print(f"  - {pool['token1']['symbol']}: {format_amount(pool['protocol_fees']['token1'], pool['token1']['decimals'])}")
