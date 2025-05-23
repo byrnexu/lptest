@@ -335,32 +335,24 @@ def mint_v3_position(
         print(f"池子地址: {pool_address}")
         print(f"当前价格: {current_price:.8f} {sorted_token1_name}")
         
-        # 计算当前价格对应的tick
-        current_tick = price_to_tick(current_price, token0_decimals, token1_decimals)
-        print(f"当前价格对应的tick: {tick}")
-        print(f"当前计算出来的tick: {current_tick}")
-        
-        # 计算价格范围（缩小到0.5%）
-        price_lower = current_price * (Decimal('1') - Decimal(str(price_range_percent)) / Decimal('100'))
-        price_upper = current_price * (Decimal('1') + Decimal(str(price_range_percent)) / Decimal('100'))
-        
-        # 转换为tick
-        tick_lower = price_to_tick(price_lower, token0_decimals, token1_decimals)
-        tick_upper = price_to_tick(price_upper, token0_decimals, token1_decimals)
+        # 直接使用返回的tick计算tick范围
+        tick_range = int(abs(tick) * price_range_percent / 100)  # 计算tick范围
+        # 对于负tick，我们需要调整计算方式
+        if tick < 0:
+            tick_lower = tick - tick_range  # 更小的tick值对应更高的价格
+            tick_upper = tick + tick_range  # 更大的tick值对应更低的价格
+        else:
+            tick_lower = tick - tick_range  # 更小的tick值对应更低的价格
+            tick_upper = tick + tick_range  # 更大的tick值对应更高的价格
+            
+        # 确保tick范围是60的倍数（PancakeSwap V3的要求）
+        tick_lower = (tick_lower // 60) * 60
+        tick_upper = (tick_upper // 60) * 60
         
         print(f"\nTick范围:")
+        print(f"当前Tick: {tick}")
         print(f"Tick下限: {tick_lower}")
         print(f"Tick上限: {tick_upper}")
-        
-        # 计算tick对应的价格
-        price_lower_tick = tick_to_price(tick_lower, token0_decimals, token1_decimals)
-        price_upper_tick = tick_to_price(tick_upper, token0_decimals, token1_decimals)
-        print(f"Tick下限对应价格: {price_lower_tick:.8f} {sorted_token1_name}")
-        print(f"Tick上限对应价格: {price_upper_tick:.8f} {sorted_token1_name}")
-        
-        print(f"\n价格范围:")
-        print(f"下限: {price_lower:.8f} {sorted_token1_name}")
-        print(f"上限: {price_upper:.8f} {sorted_token1_name}")
         
         # 确保tick范围有效
         if tick_lower >= tick_upper:
@@ -431,8 +423,8 @@ def mint_v3_position(
 
         print("\n=== 价格范围信息 ===")
         print(f"当前价格: {current_price:.8f} {sorted_token1_name}")
-        print(f"价格下限: {price_lower:.8f} {sorted_token1_name}")
-        print(f"价格上限: {price_upper:.8f} {sorted_token1_name}")
+        print(f"价格下限: {tick_lower}")
+        print(f"价格上限: {tick_upper}")
         print(f"价格范围百分比: {price_range_percent}%")
         print(f"滑点百分比: {slippage_percent}%")
 
@@ -486,8 +478,8 @@ def mint_v3_position(
                 'pool_address': pool_address,
                 'current_price': current_price,
                 'price_range': {
-                    'lower': price_lower,
-                    'upper': price_upper
+                    'lower': tick_lower,
+                    'upper': tick_upper
                 },
                 'tick_range': {
                     'lower': tick_lower,
@@ -514,8 +506,8 @@ def mint_v3_position(
                     'pool_address': pool_address,
                     'current_price': current_price,
                     'price_range': {
-                        'lower': price_lower,
-                        'upper': price_upper
+                        'lower': tick_lower,
+                        'upper': tick_upper
                     },
                     'tick_range': {
                         'lower': tick_lower,
@@ -587,7 +579,7 @@ if __name__ == "__main__":
         print("\n交易详情:")
         print(f"池子地址: {result['pool_address']}")
         print(f"当前价格: {result['current_price']:.8f} USDT")
-        print(f"价格范围: {result['price_range']['lower']:.8f} - {result['price_range']['upper']:.8f} USDT")
+        print(f"价格范围: {result['price_range']['lower']} - {result['price_range']['upper']} USDT")
         print(f"Tick范围: {result['tick_range']['lower']} - {result['tick_range']['upper']}")
         print(f"AIOT数量: {result['amounts']['token0']['desired']:.2f} (最小: {result['amounts']['token0']['min']:.2f})")
         print(f"USDT数量: {result['amounts']['token1']['desired']:.2f} (最小: {result['amounts']['token1']['min']:.2f})")
