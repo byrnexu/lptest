@@ -20,6 +20,13 @@ ERC20_ABI = [
         "name": "balanceOf",
         "outputs": [{"name": "balance", "type": "uint256"}],
         "type": "function"
+    },
+    {
+        "constant": True,
+        "inputs": [],
+        "name": "decimals",
+        "outputs": [{"name": "", "type": "uint8"}],
+        "type": "function"
     }
 ]
 
@@ -82,6 +89,19 @@ def get_token_symbol(token_address: str) -> str:
 
     return token_address
 
+def get_token_decimals(token_address: str, w3: Web3) -> int:
+    """获取代币精度"""
+    try:
+        token_contract = w3.eth.contract(address=Web3.to_checksum_address(token_address), abi=ERC20_ABI)
+        return token_contract.functions.decimals().call()
+    except Exception as e:
+        print(f"获取代币精度时出错: {str(e)}")
+        return 18  # 默认精度
+
+def format_amount(amount: int, decimals: int) -> str:
+    """格式化代币数量，考虑精度"""
+    return str(Decimal(amount) / Decimal(10 ** decimals))
+
 def get_pool_details(pool_address: str, w3: Web3) -> Dict:
     """获取池子的详细信息"""
     try:
@@ -104,9 +124,11 @@ def get_pool_details(pool_address: str, w3: Web3) -> Dict:
         # 获取协议费用信息
         protocol_fees = pool.functions.protocolFees().call()
         
-        # 获取代币符号
+        # 获取代币符号和精度
         token0_symbol = get_token_symbol(token0)
         token1_symbol = get_token_symbol(token1)
+        token0_decimals = get_token_decimals(token0, w3)
+        token1_decimals = get_token_decimals(token1, w3)
         
         # 计算实际价格
         price = (Decimal(sqrt_price_x96) ** 2) / (Decimal(2) ** 192)
@@ -115,11 +137,13 @@ def get_pool_details(pool_address: str, w3: Web3) -> Dict:
             "address": pool_address,
             "token0": {
                 "address": token0,
-                "symbol": token0_symbol
+                "symbol": token0_symbol,
+                "decimals": token0_decimals
             },
             "token1": {
                 "address": token1,
-                "symbol": token1_symbol
+                "symbol": token1_symbol,
+                "decimals": token1_decimals
             },
             "fee": fee / 10000,  # 转换为百分比
             "current_price": float(price),
@@ -214,8 +238,8 @@ def main():
             print(f"当前Tick: {pool['tick']}")
             print(f"流动性: {pool['liquidity']}")
             print(f"累积的协议费用:")
-            print(f"  - {pool['token0']['symbol']}: {pool['protocol_fees']['token0']}")
-            print(f"  - {pool['token1']['symbol']}: {pool['protocol_fees']['token1']}")
+            print(f"  - {pool['token0']['symbol']}: {format_amount(pool['protocol_fees']['token0'], pool['token0']['decimals'])}")
+            print(f"  - {pool['token1']['symbol']}: {format_amount(pool['protocol_fees']['token1'], pool['token1']['decimals'])}")
             print("-" * 50)
 
     except KeyboardInterrupt:
