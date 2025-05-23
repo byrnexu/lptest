@@ -569,10 +569,10 @@ if __name__ == "__main__":
         amount0_desired=balance_aiot,  # 使用AIOT余额
         amount1_desired=balance_usdt,  # 使用USDT余额
         recipient=wallet_address,
-        price_range_percent=10,
-        slippage_percent=0.5,
+        price_range_percent=5,  # 从10%减小到5%
+        slippage_percent=1.0,   # 从0.5%增加到1%
         deadline_minutes=20,
-        send_transaction=False  # 设置为True并提供private_key可以实际发送交易
+        send_transaction=False
     )
 
     if result:
