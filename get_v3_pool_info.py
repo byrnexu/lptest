@@ -1,15 +1,27 @@
 import json
 from web3 import Web3
-from typing import List, Optional, Tuple
+from typing import List, Optional, Tuple, Dict
 import signal
 import sys
 from tqdm import tqdm
+from decimal import Decimal
 
 # BSC节点URL
 BSC_NODE_URL = "https://bsc-dataseed.binance.org/"
 
 # PancakeSwap V3 Factory合约地址
 PANCAKESWAP_V3_FACTORY = "0x0BFbCF9fa4f9C56B0F40a671Ad40E0805A091865"
+
+# ERC20 ABI
+ERC20_ABI = [
+    {
+        "constant": True,
+        "inputs": [{"name": "_owner", "type": "address"}],
+        "name": "balanceOf",
+        "outputs": [{"name": "balance", "type": "uint256"}],
+        "type": "function"
+    }
+]
 
 # 全局变量用于控制程序退出
 running = True
@@ -24,26 +36,12 @@ def signal_handler(signum, frame):
 signal.signal(signal.SIGINT, signal_handler)
 
 # 加载ABI
-with open("ABI/PancakeV3Factory.ABI", "r") as f:
+with open("ABI/PancakeV3Factory.json", "r") as f:
     FACTORY_ABI = json.load(f)
 
-# V3池子的ABI
-POOL_ABI = [
-    {
-        "inputs": [],
-        "name": "token0",
-        "outputs": [{"internalType": "address", "name": "", "type": "address"}],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "token1",
-        "outputs": [{"internalType": "address", "name": "", "type": "address"}],
-        "stateMutability": "view",
-        "type": "function"
-    }
-]
+# 加载V3池子ABI
+with open("ABI/PancakeV3Pool.json", "r") as f:
+    POOL_ABI = json.load(f)
 
 # 加载代币信息
 with open("bsc_tokens.json", "r") as f:
@@ -84,6 +82,58 @@ def get_token_symbol(token_address: str) -> str:
 
     return token_address
 
+def get_pool_details(pool_address: str, w3: Web3) -> Dict:
+    """获取池子的详细信息"""
+    try:
+        # 创建池子合约实例
+        pool = w3.eth.contract(address=Web3.to_checksum_address(pool_address), abi=POOL_ABI)
+        
+        # 获取基本信息
+        token0 = pool.functions.token0().call()
+        token1 = pool.functions.token1().call()
+        fee = pool.functions.fee().call()
+        
+        # 获取当前价格信息
+        slot0 = pool.functions.slot0().call()
+        sqrt_price_x96 = slot0[0]
+        tick = slot0[1]
+        
+        # 获取流动性信息
+        liquidity = pool.functions.liquidity().call()
+        
+        # 获取协议费用信息
+        protocol_fees = pool.functions.protocolFees().call()
+        
+        # 获取代币符号
+        token0_symbol = get_token_symbol(token0)
+        token1_symbol = get_token_symbol(token1)
+        
+        # 计算实际价格
+        price = (Decimal(sqrt_price_x96) ** 2) / (Decimal(2) ** 192)
+        
+        return {
+            "address": pool_address,
+            "token0": {
+                "address": token0,
+                "symbol": token0_symbol
+            },
+            "token1": {
+                "address": token1,
+                "symbol": token1_symbol
+            },
+            "fee": fee / 10000,  # 转换为百分比
+            "current_price": float(price),
+            "tick": tick,
+            "liquidity": liquidity,
+            "protocol_fees": {
+                "token0": protocol_fees[0],
+                "token1": protocol_fees[1]
+            }
+        }
+    except Exception as e:
+        print(f"获取池子 {pool_address} 详细信息时出错: {str(e)}")
+        return None
+
 def get_pool_info(token0_address: str, token1_address: str) -> List[Tuple[str, str, int]]:
     """获取两个代币之间的V3池子信息"""
     w3 = Web3(Web3.HTTPProvider(BSC_NODE_URL))
@@ -91,8 +141,8 @@ def get_pool_info(token0_address: str, token1_address: str) -> List[Tuple[str, s
     # 创建Factory合约实例
     factory = w3.eth.contract(address=Web3.to_checksum_address(PANCAKESWAP_V3_FACTORY), abi=FACTORY_ABI)
 
-    # 生成费率列表：从0.01%到1%，步长0.01%
-    fee_tiers = [int(fee * 100) for fee in range(1, 101)]  # 1到100，对应0.01%到1%
+    # 生成费率列表：从0.01%到1%，步长0.05%
+    fee_tiers = [1] + [int(fee * 500) for fee in range(1, 21)]  # 1(0.01%) + 5到100(0.05%到1%)
 
     pools = []
     # 使用tqdm创建进度条
@@ -109,26 +159,10 @@ def get_pool_info(token0_address: str, token1_address: str) -> List[Tuple[str, s
             ).call()
 
             if pool_address != "0x0000000000000000000000000000000000000000":
-                # 创建池子合约实例
-                pool = w3.eth.contract(address=Web3.to_checksum_address(pool_address), abi=POOL_ABI)
-
-                try:
-                    # 获取代币地址
-                    pool_token0 = pool.functions.token0().call()
-                    pool_token1 = pool.functions.token1().call()
-
-                    # 获取代币符号
-                    token0_symbol = get_token_symbol(pool_token0)
-                    token1_symbol = get_token_symbol(pool_token1)
-
-                    # 确定代币顺序
-                    is_token0_first = pool_token0.lower() == token0_address.lower()
-                    pair_name = f"{token0_symbol}/{token1_symbol}" if is_token0_first else f"{token1_symbol}/{token0_symbol}"
-
-                    pools.append((pool_address, pair_name, fee))
-                except Exception as e:
-                    print(f"\n获取池子 {pool_address} 信息时出错: {str(e)}")
-                    continue
+                # 获取池子详细信息
+                pool_details = get_pool_details(pool_address, w3)
+                if pool_details:
+                    pools.append(pool_details)
         except Exception as e:
             print(f"\n获取费率 {fee/100}% 的池子信息时出错: {str(e)}")
             continue
@@ -170,10 +204,19 @@ def main():
             print(f"未找到V3池子")
             return
 
-        # 打印池子信息
-        print(f"\nV3池子信息:")
-        for pool_address, pair_name, fee in pools:
-            print(f"{pool_address} {pair_name} {fee/10000}%")
+        # 打印池子详细信息
+        print(f"\nV3池子详细信息:")
+        for pool in pools:
+            print(f"\n池子地址: {pool['address']}")
+            print(f"交易对: {pool['token0']['symbol']}/{pool['token1']['symbol']}")
+            print(f"费率: {pool['fee']}%")
+            print(f"当前价格: {pool['current_price']}")
+            print(f"当前Tick: {pool['tick']}")
+            print(f"流动性: {pool['liquidity']}")
+            print(f"累积的协议费用:")
+            print(f"  - {pool['token0']['symbol']}: {pool['protocol_fees']['token0']}")
+            print(f"  - {pool['token1']['symbol']}: {pool['protocol_fees']['token1']}")
+            print("-" * 50)
 
     except KeyboardInterrupt:
         print("\n程序被用户中断")

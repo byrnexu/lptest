@@ -144,7 +144,7 @@ class Web3Provider:
 FACTORY_ADDRESS = '0x0BFbCF9fa4f9C56B0F40a671Ad40E0805A091865'
 
 # 加载Factory ABI
-with open('ABI/PancakeV3Factory.ABI', 'r') as f:
+with open('ABI/PancakeV3Factory.json', 'r') as f:
     factory_abi = json.load(f)
 
 # 创建Web3提供者实例

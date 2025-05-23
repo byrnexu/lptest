@@ -11,7 +11,7 @@ QUOTER_ADDRESS = '0x678Aa4bF4E210cf2166753e054d5b7c31cc7fa86'
 
 # 加载ABI
 try:
-    with open('ABI/MixedRouteQuoterV1.ABI', 'r') as f:
+    with open('ABI/MixedRouteQuoterV1.json', 'r') as f:
         quoter_abi = json.load(f)
 except Exception as e:
     print(f"加载ABI文件失败: {str(e)}")
