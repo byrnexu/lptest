@@ -369,8 +369,8 @@ def mint_v3_position(
         amount1_desired_wei = int(Decimal(str(amount1_desired)) * Decimal(10 ** token1_decimals))
 
         # 计算最小数量（考虑滑点，使用Decimal确保精度）
-        amount0_min = int(Decimal(str(amount0_desired)) * (Decimal('1') - Decimal(str(slippage_percent)) / Decimal('100')) * Decimal(10 ** token0_decimals))
-        amount1_min = int(Decimal(str(amount1_desired)) * (Decimal('1') - Decimal(str(slippage_percent)) / Decimal('100')) * Decimal(10 ** token1_decimals))
+        amount0_min = int(Decimal(str(amount0_desired)) * (Decimal('1') - 10 * Decimal(str(slippage_percent)) / Decimal('100')) * Decimal(10 ** token0_decimals))
+        amount1_min = int(Decimal(str(amount1_desired)) * (Decimal('1') - 10 * Decimal(str(slippage_percent)) / Decimal('100')) * Decimal(10 ** token1_decimals))
 
         print(f"\n数量信息:")
         print(f"Token0 ({token0_name}):")
@@ -395,17 +395,32 @@ def mint_v3_position(
 
         # 准备mint参数
         fee = int(Decimal(str(fee_percent)) * Decimal('10000'))  # 转换为合约使用的格式
+
+        # mint_params = {
+        #     'token0': Web3.to_checksum_address(token0_address),
+        #     'token1': Web3.to_checksum_address(token1_address),
+        #     'fee': fee,
+        #     'tickLower': tick_lower,
+        #     'tickUpper': tick_upper,
+        #     'amount0Desired': amount0_desired_wei,
+        #     'amount1Desired': amount1_desired_wei,
+        #     'amount0Min': amount0_min,
+        #     'amount1Min': amount1_min,
+        #     'recipient': Web3.to_checksum_address(recipient),
+        #     'deadline': deadline
+        # }
+
         mint_params = {
-            'token0': Web3.to_checksum_address(token0_address),
-            'token1': Web3.to_checksum_address(token1_address),
-            'fee': fee,
-            'tickLower': tick_lower,
-            'tickUpper': tick_upper,
-            'amount0Desired': amount0_desired_wei,
-            'amount1Desired': amount1_desired_wei,
-            'amount0Min': amount0_min,
-            'amount1Min': amount1_min,
-            'recipient': Web3.to_checksum_address(recipient),
+            'token0': "0x55ad16Bd573B3365f43A9dAeB0Cc66A73821b4a5",
+            'token1': "0x55d398326f99059fF775485246999027B3197955",
+            'fee': 500,
+            'tickLower': -11930,
+            'tickUpper': -9840,
+            'amount0Desired': 70039168353970460471,
+            'amount1Desired': 24182265566658884179,
+            'amount0Min': 66571207111840214314,
+            'amount1Min': 23007124485730832111,
+            'recipient': "0x33723ef67C37F76B990b583812891c93C2Dbe87C",
             'deadline': deadline
         }
 
@@ -559,18 +574,22 @@ if __name__ == "__main__":
     print(f"使用AIOT余额: {balances['AIOT']['balance']:.8f}")
     print(f"使用USDT余额: {balances['USDT']['balance']:.8f}")
 
-    balance_aiot = balances["AIOT"]["balance"]
-    balance_usdt = balances["USDT"]["balance"]
+    # 使用钱包余额的一半
+    balance_aiot = balances["AIOT"]["balance"] / 2
+    balance_usdt = balances["USDT"]["balance"] / 2
+
+    print(f"使用AIOT余额的一半: {balance_aiot:.8f}")
+    print(f"使用USDT余额的一半: {balance_usdt:.8f}")
 
     result = mint_v3_position(
         token0_name="AIOT",
         token1_name="USDT",
         fee_percent=0.05,
-        amount0_desired=balance_aiot,  # 使用AIOT余额
-        amount1_desired=balance_usdt,  # 使用USDT余额
+        amount0_desired=balance_aiot,  # 使用AIOT余额的一半
+        amount1_desired=balance_usdt,  # 使用USDT余额的一半
         recipient=wallet_address,
-        price_range_percent=5,  # 从10%减小到5%
-        slippage_percent=1.0,   # 从0.5%增加到1%
+        price_range_percent=10,  # 10%
+        slippage_percent=1.0,   # 增加到1%
         deadline_minutes=20,
         send_transaction=False
     )
