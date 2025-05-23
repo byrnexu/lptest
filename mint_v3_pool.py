@@ -495,42 +495,6 @@ def mint_v3_position(
                     print("\n交易失败!")
                     print(f"交易哈希: {tx_hash.hex()}")
                     print(f"区块号: {tx_receipt['blockNumber']}")
-
-                    # 尝试获取失败原因
-                    try:
-                        tx = w3.eth.get_transaction(tx_hash)
-                        result = w3.eth.call(tx, tx_receipt.blockNumber - 1)
-                        error_msg = str(result)
-                        print(f"交易失败原因: {error_msg}")
-
-                        # 处理 STF 错误
-                        if "STF" in error_msg:
-                            print("\nSTF (Safe Transfer Failed) 错误可能的原因:")
-                            print("1. 代币余额不足")
-                            print("2. 代币合约可能暂停了转账功能")
-                            print("3. 代币合约可能有其他限制")
-
-                            # 检查余额
-                            token0_contract = w3.eth.contract(address=Web3.to_checksum_address(token0_address), abi=ERC20_ABI)
-                            token1_contract = w3.eth.contract(address=Web3.to_checksum_address(token1_address), abi=ERC20_ABI)
-
-                            balance0 = token0_contract.functions.balanceOf(
-                                Web3.to_checksum_address(recipient)
-                            ).call()
-                            balance1 = token1_contract.functions.balanceOf(
-                                Web3.to_checksum_address(recipient)
-                            ).call()
-
-                            print("\n当前余额:")
-                            print(f"Token0 ({token0_name}): {balance0 / (10 ** token0_decimals):.8f}")
-                            print(f"Token1 ({token1_name}): {balance1 / (10 ** token1_decimals):.8f}")
-
-                            print("\n需要数量:")
-                            print(f"Token0 ({token0_name}): {amount0_desired_wei / (10 ** token0_decimals):.8f}")
-                            print(f"Token1 ({token1_name}): {amount1_desired_wei / (10 ** token1_decimals):.8f}")
-
-                    except Exception as e:
-                        print(f"无法获取详细失败原因: {str(e)}")
                     return None
 
                 # 解析交易日志获取返回值
@@ -572,17 +536,6 @@ def mint_v3_position(
                 print("\n交易发送失败!")
                 print(f"错误类型: {type(e).__name__}")
                 print(f"错误信息: {str(e)}")
-
-                # 如果是 gas 相关错误
-                if "gas required exceeds allowance" in str(e).lower():
-                    print("\nGas 不足，请增加 gas 限制")
-                # 如果是余额不足错误
-                elif "insufficient funds" in str(e).lower():
-                    print("\n余额不足，请检查代币余额")
-                # 如果是滑点错误
-                elif "slippage" in str(e).lower():
-                    print("\n滑点过大，请调整滑点参数")
-
                 return None
 
             return {
