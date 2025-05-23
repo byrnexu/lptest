@@ -489,9 +489,43 @@ def mint_v3_position(
             print("等待交易确认...")
             tx_receipt = w3.eth.wait_for_transaction_receipt(tx_hash)
 
+            # 解析交易日志获取返回值
+            # 只处理 IncreaseLiquidity 事件
+            increase_liquidity_event = position_manager.events.IncreaseLiquidity()
+            logs = []
+            for log in tx_receipt['logs']:
+                try:
+                    # 检查日志是否来自 PositionManager 合约
+                    if log['address'].lower() == POSITION_MANAGER.lower():
+                        # 尝试解析事件
+                        parsed_log = increase_liquidity_event.process_log(log)
+                        if parsed_log:
+                            logs.append(parsed_log)
+                except Exception:
+                    continue
+
+            if logs:
+                log = logs[0]
+                tokenId = log['args']['tokenId']
+                liquidity = log['args']['liquidity']
+                amount0 = log['args']['amount0']
+                amount1 = log['args']['amount1']
+
+                print("\n=== Mint函数返回值 ===")
+                print(f"Token ID: {tokenId}")
+                print(f"流动性数量: {liquidity}")
+                print(f"Token0 实际使用数量: {amount0 / (10 ** token0_decimals):.8f}")
+                print(f"Token1 实际使用数量: {amount1 / (10 ** token1_decimals):.8f}")
+                print(f"交易哈希: {tx_hash.hex()}")
+                print(f"区块号: {tx_receipt['blockNumber']}")
+
             return {
                 'transaction_hash': tx_hash.hex(),
                 'status': tx_receipt.status,
+                'tokenId': tokenId if logs else None,
+                'liquidity': liquidity if logs else None,
+                'amount0': amount0 if logs else None,
+                'amount1': amount1 if logs else None,
                 'pool_address': pool_address,
                 'current_price': current_price,
                 'price_range': {
@@ -505,11 +539,13 @@ def mint_v3_position(
                 'amounts': {
                     'token0': {
                         'desired': amount0_desired,
-                        'min': amount0_min / (10 ** token0_decimals)
+                        'min': amount0_min / (10 ** token0_decimals),
+                        'actual': amount0 / (10 ** token0_decimals) if logs else None
                     },
                     'token1': {
                         'desired': amount1_desired,
-                        'min': amount1_min / (10 ** token1_decimals)
+                        'min': amount1_min / (10 ** token1_decimals),
+                        'actual': amount1 / (10 ** token1_decimals) if logs else None
                     }
                 }
             }
@@ -517,9 +553,19 @@ def mint_v3_position(
             # 模拟调用
             try:
                 # 尝试获取更详细的错误信息
-                tx = position_manager.functions.mint(mint_params).call()
+                tokenId, liquidity, amount0, amount1 = position_manager.functions.mint(mint_params).call()
+                
+                print("\n=== Mint函数返回值 ===")
+                print(f"Token ID: {tokenId}")
+                print(f"流动性数量: {liquidity}")
+                print(f"Token0 实际使用数量: {amount0 / (10 ** token0_decimals):.8f}")
+                print(f"Token1 实际使用数量: {amount1 / (10 ** token1_decimals):.8f}")
+                
                 return {
-                    'transaction': tx,
+                    'tokenId': tokenId,
+                    'liquidity': liquidity,
+                    'amount0': amount0,
+                    'amount1': amount1,
                     'pool_address': pool_address,
                     'current_price': current_price,
                     'price_range': {
@@ -533,11 +579,13 @@ def mint_v3_position(
                     'amounts': {
                         'token0': {
                             'desired': amount0_desired,
-                            'min': amount0_min / (10 ** token0_decimals)
+                            'min': amount0_min / (10 ** token0_decimals),
+                            'actual': amount0 / (10 ** token0_decimals)
                         },
                         'token1': {
                             'desired': amount1_desired,
-                            'min': amount1_min / (10 ** token1_decimals)
+                            'min': amount1_min / (10 ** token1_decimals),
+                            'actual': amount1 / (10 ** token1_decimals)
                         }
                     }
                 }
