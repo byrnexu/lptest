@@ -6,6 +6,9 @@ import sys
 from tqdm import tqdm
 from decimal import Decimal
 import math
+import time
+from datetime import datetime
+import os
 
 # BSC节点URL
 BSC_NODE_URL = "https://bsc-dataseed.binance.org/"
@@ -222,6 +225,46 @@ def get_pool_info(token0_address: str, token1_address: str) -> List[Tuple[str, s
 
     return pools
 
+def format_protocol_fees(pool_details: Dict) -> str:
+    """格式化协议费用信息"""
+    token0_fee = format_amount(pool_details["protocol_fees"]["token0"], pool_details["token0"]["decimals"])
+    token1_fee = format_amount(pool_details["protocol_fees"]["token1"], pool_details["token1"]["decimals"])
+    return f"{token0_fee:>20} {token1_fee:>20}"
+
+def monitor_pool_protocol_fees(pool_address: str, w3: Web3, output_file: str):
+    """监控池子的协议费用变化"""
+    print(f"\n开始监控池子 {pool_address} 的协议费用...")
+    print("按 Ctrl+C 停止监控")
+    
+    # 创建输出文件并写入表头
+    with open(output_file, "w") as f:
+        f.write(f"{'时间':^20} {'Token0数量':^20} {'Token1数量':^20}\n")
+        f.write("-" * 60 + "\n")
+    
+    while running:
+        try:
+            # 获取池子详细信息
+            pool_details = get_pool_details(pool_address, w3)
+            if pool_details:
+                # 获取当前时间
+                current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                
+                # 格式化协议费用
+                fees_str = format_protocol_fees(pool_details)
+                
+                # 写入文件
+                with open(output_file, "a") as f:
+                    f.write(f"{current_time:^20} {fees_str}\n")
+                
+                print(f"\r当前时间: {current_time} | Token0: {pool_details['token0']['symbol']} | Token1: {pool_details['token1']['symbol']}", end="")
+            
+            # 等待10秒
+            time.sleep(10)
+            
+        except Exception as e:
+            print(f"\n获取池子信息时出错: {str(e)}")
+            time.sleep(10)  # 发生错误时也等待10秒
+
 def main():
     try:
         # 获取用户输入
@@ -248,38 +291,33 @@ def main():
                 return
 
         print(f"\n开始扫描V3池子信息...")
+        
+        # 获取池子信息
         pools = get_pool_info(token0_address, token1_address)
-
-        if not running:  # 如果程序被中断，直接返回
-            return
-
+        
         if not pools:
-            print(f"未找到V3池子")
+            print("未找到任何池子")
             return
-
-        # 打印池子详细信息
-        print(f"\nV3池子详细信息:")
-        for pool in pools:
-            print(f"\n池子地址: {pool['address']}")
-            print(f"交易对: {pool['token0']['symbol']}/{pool['token1']['symbol']}")
-            print(f"费率: {pool['fee']}%")
-            print(f"当前价格: {pool['current_price']}")
-            print(f"当前Tick: {pool['tick']}")
-            print(f"流动性: {pool['liquidity']} (当前价格下的估算代币数量)")
-            print(f"当前价格下的代币数量:")
-            print(f"  - {pool['token0']['symbol']}: {format_amount(pool['current_amounts']['token0'], pool['token0']['decimals'])}")
-            print(f"  - {pool['token1']['symbol']}: {format_amount(pool['current_amounts']['token1'], pool['token1']['decimals'])}")
-            print(f"累积的协议费用:")
-            print(f"  - {pool['token0']['symbol']}: {format_amount(pool['protocol_fees']['token0'], pool['token0']['decimals'])}")
-            print(f"  - {pool['token1']['symbol']}: {format_amount(pool['protocol_fees']['token1'], pool['token1']['decimals'])}")
-            print("-" * 50)
-
+            
+        # 找到流动性最大的池子
+        max_liquidity_pool = max(pools, key=lambda x: x['liquidity'])
+        
+        print(f"\n找到流动性最大的池子:")
+        print(f"交易对: {max_liquidity_pool['token0']['symbol']}/{max_liquidity_pool['token1']['symbol']}")
+        print(f"费率: {max_liquidity_pool['fee']}%")
+        print(f"流动性: {max_liquidity_pool['liquidity']}")
+        
+        # 创建输出文件名
+        output_file = f"protocol_fees_{max_liquidity_pool['token0']['symbol']}_{max_liquidity_pool['token1']['symbol']}.txt"
+        
+        # 开始监控选中的池子
+        w3 = Web3(Web3.HTTPProvider(BSC_NODE_URL))
+        monitor_pool_protocol_fees(max_liquidity_pool['address'], w3, output_file)
+        
     except KeyboardInterrupt:
-        print("\n程序被用户中断")
+        print("\n程序已停止")
     except Exception as e:
-        print(f"\n程序发生错误: {str(e)}")
-    finally:
-        print("\n程序已退出")
+        print(f"发生错误: {str(e)}")
 
 if __name__ == "__main__":
     main()
