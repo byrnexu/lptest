@@ -532,6 +532,15 @@ def mint_v3_position(
                 print(f"交易哈希: {tx_hash.hex()}")
                 print(f"区块号: {tx_receipt['blockNumber']}")
 
+                # 计算并显示gas消耗
+                gas_used = tx_receipt['gasUsed']
+                gas_price_wei = tx_receipt['effectiveGasPrice']
+                bnb_cost = Web3.from_wei(gas_used * gas_price_wei, 'ether')
+                print(f"\n=== Gas消耗信息 ===")
+                print(f"Gas使用量: {gas_used}")
+                print(f"Gas价格: {Web3.from_wei(gas_price_wei, 'gwei')} Gwei")
+                print(f"BNB消耗: {bnb_cost:.12f} BNB")
+
             except Exception as e:
                 print("\n交易发送失败!")
                 print(f"错误类型: {type(e).__name__}")
@@ -657,8 +666,8 @@ if __name__ == "__main__":
     print(f"使用USDT余额: {balances['USDT']['balance']:.8f}")
 
     # 使用钱包余额的一半
-    balance_aiot = balances["AIOT"]["balance"] * 0.9999
-    balance_usdt = balances["USDT"]["balance"] * 0.9999
+    balance_aiot = balances["AIOT"]["balance"] * 0.9999 # 使用全部资金不能成功
+    balance_usdt = balances["USDT"]["balance"] * 0.9999 # 使用全部资金不能成功
 
     print(f"使用AIOT余额的一半: {balance_aiot:.8f}")
     print(f"使用USDT余额的一半: {balance_usdt:.8f}")
