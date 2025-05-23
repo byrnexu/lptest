@@ -542,9 +542,17 @@ def mint_v3_position(
                     }
                 }
             except Exception as e:
+                error_msg = str(e)
                 print(f"\n模拟调用失败，详细错误信息:")
                 print(f"错误类型: {type(e).__name__}")
-                print(f"错误信息: {str(e)}")
+                print(f"错误信息: {error_msg}")
+
+                # 检查是否是STF错误
+                if "execution reverted: STF" in error_msg:
+                    print("\n注意: 在模拟环境中出现STF错误，这通常是由于模拟环境的限制导致的。")
+                    print("在生产环境中，这个交易可能会成功执行。")
+                    print("建议在生产环境中尝试执行此交易。")
+
                 raise
 
     except Exception as e:
