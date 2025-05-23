@@ -483,28 +483,77 @@ def mint_v3_position(
 
             # 发送交易
             print("\n发送交易...")
-            tx_hash = w3.eth.send_raw_transaction(signed_txn.rawTransaction)
+            try:
+                tx_hash = w3.eth.send_raw_transaction(signed_txn.rawTransaction)
 
-            # 等待交易确认
-            print("等待交易确认...")
-            tx_receipt = w3.eth.wait_for_transaction_receipt(tx_hash)
+                # 等待交易确认
+                print("等待交易确认...")
+                tx_receipt = w3.eth.wait_for_transaction_receipt(tx_hash)
 
-            # 解析交易日志获取返回值
-            # 只处理 IncreaseLiquidity 事件
-            increase_liquidity_event = position_manager.events.IncreaseLiquidity()
-            logs = []
-            for log in tx_receipt['logs']:
-                try:
-                    # 检查日志是否来自 PositionManager 合约
-                    if log['address'].lower() == POSITION_MANAGER.lower():
-                        # 尝试解析事件
-                        parsed_log = increase_liquidity_event.process_log(log)
-                        if parsed_log:
-                            logs.append(parsed_log)
-                except Exception:
-                    continue
+                # 检查交易状态
+                if tx_receipt.status == 0:
+                    print("\n交易失败!")
+                    print(f"交易哈希: {tx_hash.hex()}")
+                    print(f"区块号: {tx_receipt['blockNumber']}")
 
-            if logs:
+                    # 尝试获取失败原因
+                    try:
+                        tx = w3.eth.get_transaction(tx_hash)
+                        result = w3.eth.call(tx, tx_receipt.blockNumber - 1)
+                        error_msg = str(result)
+                        print(f"交易失败原因: {error_msg}")
+
+                        # 处理 STF 错误
+                        if "STF" in error_msg:
+                            print("\nSTF (Safe Transfer Failed) 错误可能的原因:")
+                            print("1. 代币余额不足")
+                            print("2. 代币合约可能暂停了转账功能")
+                            print("3. 代币合约可能有其他限制")
+
+                            # 检查余额
+                            token0_contract = w3.eth.contract(address=Web3.to_checksum_address(token0_address), abi=ERC20_ABI)
+                            token1_contract = w3.eth.contract(address=Web3.to_checksum_address(token1_address), abi=ERC20_ABI)
+
+                            balance0 = token0_contract.functions.balanceOf(
+                                Web3.to_checksum_address(recipient)
+                            ).call()
+                            balance1 = token1_contract.functions.balanceOf(
+                                Web3.to_checksum_address(recipient)
+                            ).call()
+
+                            print("\n当前余额:")
+                            print(f"Token0 ({token0_name}): {balance0 / (10 ** token0_decimals):.8f}")
+                            print(f"Token1 ({token1_name}): {balance1 / (10 ** token1_decimals):.8f}")
+
+                            print("\n需要数量:")
+                            print(f"Token0 ({token0_name}): {amount0_desired_wei / (10 ** token0_decimals):.8f}")
+                            print(f"Token1 ({token1_name}): {amount1_desired_wei / (10 ** token1_decimals):.8f}")
+
+                    except Exception as e:
+                        print(f"无法获取详细失败原因: {str(e)}")
+                    return None
+
+                # 解析交易日志获取返回值
+                # 只处理 IncreaseLiquidity 事件
+                increase_liquidity_event = position_manager.events.IncreaseLiquidity()
+                logs = []
+                for log in tx_receipt['logs']:
+                    try:
+                        # 检查日志是否来自 PositionManager 合约
+                        if log['address'].lower() == POSITION_MANAGER.lower():
+                            # 尝试解析事件
+                            parsed_log = increase_liquidity_event.process_log(log)
+                            if parsed_log:
+                                logs.append(parsed_log)
+                    except Exception:
+                        continue
+
+                if not logs:
+                    print("\n警告: 未找到 IncreaseLiquidity 事件")
+                    print(f"交易哈希: {tx_hash.hex()}")
+                    print(f"区块号: {tx_receipt['blockNumber']}")
+                    return None
+
                 log = logs[0]
                 tokenId = log['args']['tokenId']
                 liquidity = log['args']['liquidity']
@@ -518,6 +567,23 @@ def mint_v3_position(
                 print(f"Token1 实际使用数量: {amount1 / (10 ** token1_decimals):.8f}")
                 print(f"交易哈希: {tx_hash.hex()}")
                 print(f"区块号: {tx_receipt['blockNumber']}")
+
+            except Exception as e:
+                print("\n交易发送失败!")
+                print(f"错误类型: {type(e).__name__}")
+                print(f"错误信息: {str(e)}")
+
+                # 如果是 gas 相关错误
+                if "gas required exceeds allowance" in str(e).lower():
+                    print("\nGas 不足，请增加 gas 限制")
+                # 如果是余额不足错误
+                elif "insufficient funds" in str(e).lower():
+                    print("\n余额不足，请检查代币余额")
+                # 如果是滑点错误
+                elif "slippage" in str(e).lower():
+                    print("\n滑点过大，请调整滑点参数")
+
+                return None
 
             return {
                 'transaction_hash': tx_hash.hex(),
@@ -554,13 +620,13 @@ def mint_v3_position(
             try:
                 # 尝试获取更详细的错误信息
                 tokenId, liquidity, amount0, amount1 = position_manager.functions.mint(mint_params).call()
-                
+
                 print("\n=== Mint函数返回值 ===")
                 print(f"Token ID: {tokenId}")
                 print(f"流动性数量: {liquidity}")
                 print(f"Token0 实际使用数量: {amount0 / (10 ** token0_decimals):.8f}")
                 print(f"Token1 实际使用数量: {amount1 / (10 ** token1_decimals):.8f}")
-                
+
                 return {
                     'tokenId': tokenId,
                     'liquidity': liquidity,
@@ -638,8 +704,8 @@ if __name__ == "__main__":
     print(f"使用USDT余额: {balances['USDT']['balance']:.8f}")
 
     # 使用钱包余额的一半
-    balance_aiot = balances["AIOT"]["balance"] / 2
-    balance_usdt = balances["USDT"]["balance"] / 2
+    balance_aiot = balances["AIOT"]["balance"] * 0.9999
+    balance_usdt = balances["USDT"]["balance"] * 0.9999
 
     print(f"使用AIOT余额的一半: {balance_aiot:.8f}")
     print(f"使用USDT余额的一半: {balance_usdt:.8f}")
