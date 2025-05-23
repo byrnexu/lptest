@@ -49,7 +49,7 @@ def get_token_decimals(token_address: str, w3: Web3) -> int:
         return 18  # 默认精度
 
 def get_v3_pool_price(token0_name: str, token1_name: str, fee_percent: float):
-    """获取V3池子的当前价格
+    """获取V3池子的当前价格和地址
     
     Args:
         token0_name: 第一个代币的名称或符号
@@ -57,7 +57,9 @@ def get_v3_pool_price(token0_name: str, token1_name: str, fee_percent: float):
         fee_percent: 费率百分比（例如：0.05表示0.05%）
     
     Returns:
-        float: 代币1/代币0的价格
+        tuple: (pool_address, price) 如果找到池子，否则返回 (None, None)
+        - pool_address: 池子合约地址
+        - price: 代币1/代币0的价格
     """
     try:
         # 初始化Web3
@@ -90,7 +92,7 @@ def get_v3_pool_price(token0_name: str, token1_name: str, fee_percent: float):
         
         if pool_address == "0x0000000000000000000000000000000000000000":
             print(f"未找到{token0_name}/{token1_name} V3池子 (费率: {fee_percent}%)")
-            return None
+            return None, None
             
         # 创建池子合约实例
         pool = w3.eth.contract(address=Web3.to_checksum_address(pool_address), abi=POOL_ABI)
@@ -109,14 +111,87 @@ def get_v3_pool_price(token0_name: str, token1_name: str, fee_percent: float):
         # 调整价格以考虑代币精度差异
         price_adjusted = float(price) * (10 ** (token1_decimals - token0_decimals))
         
-        return price_adjusted
+        return pool_address, price_adjusted
         
     except Exception as e:
         print(f"获取价格时出错: {str(e)}")
-        return None
+        return None, None
+
+def get_token_balances(address: str, token_names: list) -> dict:
+    """获取指定地址上多个代币的余额
+    
+    Args:
+        address: 要查询的钱包地址
+        token_names: 代币名称或符号列表
+    
+    Returns:
+        dict: {
+            'token_name': {
+                'address': '代币合约地址',
+                'balance': '代币余额',
+                'decimals': '代币精度'
+            },
+            ...
+        }
+    """
+    try:
+        # 初始化Web3
+        w3 = Web3(Web3.HTTPProvider(BSC_NODE_URL))
+        
+        # 检查地址格式
+        if not w3.is_address(address):
+            raise ValueError(f"无效的地址格式: {address}")
+            
+        # 创建代币合约实例
+        token_contract = w3.eth.contract(abi=ERC20_ABI)
+        
+        result = {}
+        for token_name in token_names:
+            try:
+                # 获取代币地址
+                token_address = get_token_address(token_name)
+                
+                # 获取代币精度
+                decimals = get_token_decimals(token_address, w3)
+                
+                # 获取代币余额
+                balance = token_contract.functions.balanceOf(
+                    Web3.to_checksum_address(address)
+                ).call(address=Web3.to_checksum_address(token_address))
+                
+                # 格式化余额
+                formatted_balance = float(balance) / (10 ** decimals)
+                
+                result[token_name] = {
+                    'address': token_address,
+                    'balance': formatted_balance,
+                    'decimals': decimals
+                }
+                
+            except Exception as e:
+                print(f"获取{token_name}余额时出错: {str(e)}")
+                continue
+                
+        return result
+        
+    except Exception as e:
+        print(f"获取代币余额时出错: {str(e)}")
+        return {}
 
 if __name__ == "__main__":
-    # 示例：获取AIOT/USDT 0.05%费率池子的价格
-    price = get_v3_pool_price("AIOT", "USDT", 0.05)
-    if price:
-        print(f"AIOT/USDT V3池子当前价格: {price:.8f} USDT") 
+    # 示例1：获取AIOT/USDT 0.05%费率池子的价格
+    pool_address, price = get_v3_pool_price("AIOT", "USDT", 0.05)
+    if pool_address and price:
+        print(f"AIOT/USDT V3池子地址: {pool_address}")
+        print(f"AIOT/USDT V3池子当前价格: {price:.8f} USDT")
+        
+    # 示例2：获取指定地址上AIOT和USDT的余额
+    wallet_address = "0x55ad16Bd573B3365f43A9dAeB0Cc66A73821b4a5"  # 示例地址
+    balances = get_token_balances(wallet_address, ["AIOT", "USDT"])
+    
+    print("\n代币余额:")
+    for token_name, info in balances.items():
+        print(f"{token_name}:")
+        print(f"  合约地址: {info['address']}")
+        print(f"  余额: {info['balance']:.8f}")
+        print(f"  精度: {info['decimals']}") 
