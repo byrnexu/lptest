@@ -3,6 +3,11 @@ from web3 import Web3
 from decimal import Decimal
 import math
 from datetime import datetime, timedelta
+from dotenv import load_dotenv
+import os
+
+# 加载.env文件
+load_dotenv()
 
 # BSC节点URL
 BSC_NODE_URL = "https://bsc-dataseed.binance.org/"
@@ -396,33 +401,33 @@ def mint_v3_position(
         # 准备mint参数
         fee = int(Decimal(str(fee_percent)) * Decimal('10000'))  # 转换为合约使用的格式
 
-        # mint_params = {
-        #     'token0': Web3.to_checksum_address(token0_address),
-        #     'token1': Web3.to_checksum_address(token1_address),
-        #     'fee': fee,
-        #     'tickLower': tick_lower,
-        #     'tickUpper': tick_upper,
-        #     'amount0Desired': amount0_desired_wei,
-        #     'amount1Desired': amount1_desired_wei,
-        #     'amount0Min': amount0_min,
-        #     'amount1Min': amount1_min,
-        #     'recipient': Web3.to_checksum_address(recipient),
-        #     'deadline': deadline
-        # }
-
         mint_params = {
-            'token0': "0x55ad16Bd573B3365f43A9dAeB0Cc66A73821b4a5",
-            'token1': "0x55d398326f99059fF775485246999027B3197955",
-            'fee': 500,
-            'tickLower': -11930,
-            'tickUpper': -9840,
-            'amount0Desired': 70039168353970460471,
-            'amount1Desired': 24182265566658884179,
-            'amount0Min': 66571207111840214314,
-            'amount1Min': 23007124485730832111,
-            'recipient': "0x33723ef67C37F76B990b583812891c93C2Dbe87C",
+            'token0': Web3.to_checksum_address(token0_address),
+            'token1': Web3.to_checksum_address(token1_address),
+            'fee': fee,
+            'tickLower': tick_lower,
+            'tickUpper': tick_upper,
+            'amount0Desired': amount0_desired_wei,
+            'amount1Desired': amount1_desired_wei,
+            'amount0Min': amount0_min,
+            'amount1Min': amount1_min,
+            'recipient': Web3.to_checksum_address(recipient),
             'deadline': deadline
         }
+
+        # mint_params = {
+        #     'token0': "0x55ad16Bd573B3365f43A9dAeB0Cc66A73821b4a5",
+        #     'token1': "0x55d398326f99059fF775485246999027B3197955",
+        #     'fee': 500,
+        #     'tickLower': -11930,
+        #     'tickUpper': -9840,
+        #     'amount0Desired': 70039168353970460471,
+        #     'amount1Desired': 24182265566658884179,
+        #     'amount0Min': 66571207111840214314,
+        #     'amount1Min': 23007124485730832111,
+        #     'recipient': "0x33723ef67C37F76B990b583812891c93C2Dbe87C",
+        #     'deadline': deadline
+        # }
 
         print("\n=== Mint参数详情 ===")
         print(f"Token0: {mint_params['token0']}")
@@ -453,10 +458,7 @@ def mint_v3_position(
         print(f"  转换为wei: {amount1_desired_wei}")
         print(f"  最小数量(wei): {amount1_min}")
 
-        if send_transaction:
-            if not private_key:
-                raise ValueError("发送交易需要提供私钥")
-
+        if send_transaction and private_key:
             # 获取账户地址
             account = w3.eth.account.from_key(private_key)
             address = account.address
@@ -550,6 +552,11 @@ def mint_v3_position(
         return None
 
 if __name__ == "__main__":
+    # 从.env文件获取私钥
+    private_key = os.getenv('PRIVATE_KEY')
+    if not private_key:
+        raise ValueError("未在.env文件中找到PRIVATE_KEY")
+
     # 示例1：获取AIOT/USDT 0.05%费率池子的价格
     fee_percent = 0.05
     pool_address, price, is_initialized, token0_name, token1_name, sqrt_price_x96, tick = get_v3_pool_price("AIOT", "USDT", fee_percent)
@@ -591,7 +598,8 @@ if __name__ == "__main__":
         price_range_percent=10,  # 10%
         slippage_percent=1.0,   # 增加到1%
         deadline_minutes=20,
-        send_transaction=False
+        send_transaction=True,
+        private_key=private_key  # 传入从.env获取的私钥
     )
 
     if result:
