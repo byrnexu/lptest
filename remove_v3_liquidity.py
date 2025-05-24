@@ -156,9 +156,24 @@ def remove_liquidity(token_id):
                 'deadline': deadline
             }
 
+            # 估算gas
+            try:
+                estimated_gas = position_manager.functions.decreaseLiquidity(decrease_params).estimate_gas({
+                    'from': RECIPIENT_ADDRESS,
+                    'nonce': current_nonce,
+                    'gasPrice': w3.eth.gas_price,
+                })
+                print(f"\n=== 移除流动性Gas估算信息 ===")
+                print(f"估算Gas: {estimated_gas}")
+                print(f"Gas价格: {Web3.from_wei(w3.eth.gas_price, 'gwei')} Gwei")
+                print(f"估算Gas费用: {format_bnb_amount(estimated_gas * w3.eth.gas_price):.12f} BNB")
+            except Exception as e:
+                print(f"\nGas估算失败: {str(e)}")
+                estimated_gas = 500000  # 使用默认值
+
             decrease_tx = position_manager.functions.decreaseLiquidity(decrease_params).build_transaction({
                 'from': RECIPIENT_ADDRESS,
-                'gas': 500000,
+                'gas': int(estimated_gas * 1.2),  # 留20%余量
                 'gasPrice': w3.eth.gas_price,
                 'nonce': current_nonce,
             })
@@ -193,9 +208,24 @@ def remove_liquidity(token_id):
             'amount1Max': 2**128 - 1   # uint128.max
         }
 
+        # 估算gas
+        try:
+            estimated_gas = position_manager.functions.collect(collect_params).estimate_gas({
+                'from': RECIPIENT_ADDRESS,
+                'nonce': current_nonce,
+                'gasPrice': w3.eth.gas_price,
+            })
+            print(f"\n=== 收集代币Gas估算信息 ===")
+            print(f"估算Gas: {estimated_gas}")
+            print(f"Gas价格: {Web3.from_wei(w3.eth.gas_price, 'gwei')} Gwei")
+            print(f"估算Gas费用: {format_bnb_amount(estimated_gas * w3.eth.gas_price):.12f} BNB")
+        except Exception as e:
+            print(f"\nGas估算失败: {str(e)}")
+            estimated_gas = 500000  # 使用默认值
+
         collect_tx = position_manager.functions.collect(collect_params).build_transaction({
             'from': RECIPIENT_ADDRESS,
-            'gas': 500000,
+            'gas': int(estimated_gas * 1.2),  # 留20%余量
             'gasPrice': w3.eth.gas_price,
             'nonce': current_nonce,
         })

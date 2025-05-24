@@ -469,11 +469,33 @@ def mint_v3_position(
             # 获取gas价格
             gas_price = w3.eth.gas_price
 
-            # 构建交易
+            # 估算gas
+            try:
+                # 为gas估算创建更宽松的参数
+                estimation_params = mint_params.copy()
+                # 将最小数量设置为0，避免滑点检查
+                estimation_params['amount0Min'] = 0
+                estimation_params['amount1Min'] = 0
+
+                estimated_gas = position_manager.functions.mint(estimation_params).estimate_gas({
+                    'from': address,
+                    'nonce': nonce,
+                    'gasPrice': gas_price,
+                    'chainId': 56  # BSC主网chainId
+                })
+                print(f"\n=== Gas估算信息 ===")
+                print(f"估算Gas: {estimated_gas}")
+                print(f"Gas价格: {Web3.from_wei(gas_price, 'gwei')} Gwei")
+                print(f"估算Gas费用: {Web3.from_wei(estimated_gas * gas_price, 'ether'):.12f} BNB")
+            except Exception as e:
+                print(f"\nGas估算失败: {str(e)}")
+                estimated_gas = 5000000  # 使用默认值
+
+            # 构建交易（使用原始参数，包含实际的滑点限制）
             transaction = position_manager.functions.mint(mint_params).build_transaction({
                 'from': address,
                 'nonce': nonce,
-                'gas': 5000000,  # 设置一个足够大的gas限制
+                'gas': int(estimated_gas * 1.2),  # 留20%余量
                 'gasPrice': gas_price,
                 'chainId': 56  # BSC主网chainId
             })
@@ -495,6 +517,36 @@ def mint_v3_position(
                     print("\n交易失败!")
                     print(f"交易哈希: {tx_hash.hex()}")
                     print(f"区块号: {tx_receipt['blockNumber']}")
+
+                    # 尝试获取详细的错误信息
+                    try:
+                        # 获取交易
+                        tx = w3.eth.get_transaction(tx_hash)
+                        # 重放交易以获取错误信息
+                        w3.eth.call(tx, tx_receipt['blockNumber'] - 1)
+                    except Exception as e:
+                        error_msg = str(e)
+                        print("\n错误详情:")
+                        if "execution reverted: " in error_msg:
+                            # 提取合约返回的错误信息
+                            revert_msg = error_msg.split("execution reverted: ")[1]
+                            print(f"合约错误: {revert_msg}")
+                        else:
+                            print(f"错误信息: {error_msg}")
+
+                        # 检查常见错误
+                        if "insufficient funds" in error_msg.lower():
+                            print("\n可能原因: 钱包余额不足")
+                        elif "slippage" in error_msg.lower():
+                            print("\n可能原因: 价格滑点超出限制")
+                            print("建议: 增加 slippage_percent 参数值")
+                        elif "price" in error_msg.lower():
+                            print("\n可能原因: 当前价格超出设定的价格范围")
+                            print("建议: 调整 price_range_percent 参数值")
+                        elif "gas" in error_msg.lower():
+                            print("\n可能原因: Gas 不足")
+                            print("建议: 增加 gas 限制")
+
                     return None
 
                 # 解析交易日志获取返回值
@@ -679,8 +731,8 @@ if __name__ == "__main__":
         amount0_desired=balance_aiot,  # 使用AIOT余额的一半
         amount1_desired=balance_usdt,  # 使用USDT余额的一半
         recipient=wallet_address,
-        price_range_percent=10,  # 10%
-        slippage_percent=1.0,   # 增加到1%
+        price_range_percent=1,  # 10%
+        slippage_percent=10,   # 增加到1%
         deadline_minutes=20,
         send_transaction=True,
         private_key=private_key  # 传入从.env获取的私钥
