@@ -87,10 +87,10 @@ def get_pool_tokens(token0_address, token1_address, fee):
 
     return total0 / (10 ** token0_decimals), total1 / (10 ** token1_decimals)
 
-def get_pool_fees(token0_address, token1_address, fee, days=7):
+def get_pool_fees(token0_address, token1_address, fee, minutes=60):
     """获取PancakeSwap V3池子过去一段时间的手续费"""
-    print(f"\n开始查询过去{days}天的手续费...")
-    
+    print(f"\n开始查询过去{minutes}分钟的手续费...")
+
     # 获取池子地址
     factory_address = '0x0BFbCF9fa4f9C56B0F40a671Ad40E0805A091865'
     factory_contract = w3.eth.contract(address=Web3.to_checksum_address(factory_address), abi=factory_abi)
@@ -117,20 +117,22 @@ def get_pool_fees(token0_address, token1_address, fee, days=7):
     end_block = w3.eth.block_number
     end_block_data = w3.eth.get_block(end_block)
     end_time = datetime.fromtimestamp(end_block_data.timestamp)
-    
-    # 计算开始时间（24小时前）
-    start_time = end_time - timedelta(days=days)
-    
+
+    # 计算开始时间（minutes分钟前）
+    start_time = end_time - timedelta(minutes=minutes)
+
     # 二分查找开始区块
-    left = end_block - 28800 * days * 2  # 预估最小区块
+    # BSC每3秒一个区块，所以每分钟约20个区块
+    blocks_per_minute = 20
+    left = end_block - blocks_per_minute * minutes * 2  # 预估最小区块
     right = end_block
     start_block = None
-    
+
     while left <= right:
         mid = (left + right) // 2
         mid_block_data = w3.eth.get_block(mid)
         mid_time = datetime.fromtimestamp(mid_block_data.timestamp)
-        
+
         if abs((mid_time - start_time).total_seconds()) < 60:  # 允许1分钟的误差
             start_block = mid
             break
@@ -138,17 +140,22 @@ def get_pool_fees(token0_address, token1_address, fee, days=7):
             left = mid + 1
         else:
             right = mid - 1
-    
+
     if start_block is None:
         start_block = left
-    
+
     # 获取区块时间戳
     start_block_data = w3.eth.get_block(start_block)
     start_time = datetime.fromtimestamp(start_block_data.timestamp)
-    
+
+    # 计算实际的时间差
+    time_diff = end_time - start_time
+    minutes_diff = time_diff.total_seconds() / 60
+
     print(f"开始区块: {start_block} (时间: {start_time.strftime('%Y-%m-%d %H:%M:%S')})")
     print(f"结束区块: {end_block} (时间: {end_time.strftime('%Y-%m-%d %H:%M:%S')})")
     print(f"区块范围: {end_block - start_block}")
+    print(f"实际时间范围: {minutes_diff:.1f}分钟")
 
     # 将区块范围分成多个小段，每段最多50000个区块
     block_ranges = []
@@ -163,12 +170,12 @@ def get_pool_fees(token0_address, token1_address, fee, days=7):
     # 计算总手续费
     total_fee0 = 0
     total_fee1 = 0
-    
+
     for i, (range_start, range_end) in enumerate(block_ranges, 1):
         print(f"\n正在处理第 {i}/{len(block_ranges)} 段 (区块 {range_start} - {range_end})...")
         swap_filter = pool_contract.events.Swap.create_filter(fromBlock=range_start, toBlock=range_end)
         swap_events = swap_filter.get_all_entries()
-        
+
         for event in tqdm(swap_events, desc=f"处理第 {i} 段事件"):
             # 计算手续费
             # 如果amount0为负，说明是token0的输入，手续费在amount0中
@@ -195,9 +202,9 @@ if __name__ == "__main__":
         print(f"AIOT总量: {total0}")
         print(f"USDT总量: {total1}")
 
-    # 获取过去1天的手续费
-    fee0, fee1 = get_pool_fees(token0, token1, fee, days=1)
+    # 获取过去60分钟的手续费
+    fee0, fee1 = get_pool_fees(token0, token1, fee, minutes=1440)
     if fee0 is not None and fee1 is not None:
-        print(f"\n过去1天手续费:")
+        print(f"\n过去60分钟手续费:")
         print(f"AIOT手续费: {fee0}")
         print(f"USDT手续费: {fee1}")
