@@ -143,8 +143,15 @@ def get_pool_fees(token0_address, token1_address, fee, days=7):
         swap_events = swap_filter.get_all_entries()
         
         for event in tqdm(swap_events, desc=f"处理第 {i} 段事件"):
-            total_fee0 += event.args.protocolFeesToken0
-            total_fee1 += event.args.protocolFeesToken1
+            # 计算手续费
+            # 如果amount0为负，说明是token0的输入，手续费在amount0中
+            # 如果amount1为负，说明是token1的输入，手续费在amount1中
+            if event.args.amount0 < 0:  # token0输入
+                fee_amount = abs(event.args.amount0) * fee / 1000000  # fee是万分比，需要除以1000000
+                total_fee0 += fee_amount
+            if event.args.amount1 < 0:  # token1输入
+                fee_amount = abs(event.args.amount1) * fee / 1000000
+                total_fee1 += fee_amount
 
     return total_fee0 / (10 ** token0_decimals), total_fee1 / (10 ** token1_decimals)
 
