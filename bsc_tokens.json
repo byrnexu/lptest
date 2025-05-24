@@ -6,8 +6,8 @@
     "total_supply": "5984993799548711095083858164",
     "address": "0x55d398326f99059fF775485246999027B3197955",
     "first_seen": "2025-05-22 14:17:02",
-    "count": 197200,
-    "last_seen": "2025-05-24 15:03:48",
+    "count": 197365,
+    "last_seen": "2025-05-24 15:04:06",
     "rank": 1
   },
   "0xC71B5F631354BE6853eFe9C3Ab6b9590F8302e81": {
@@ -17,8 +17,8 @@
     "total_supply": "100000000000000000000000000",
     "address": "0xC71B5F631354BE6853eFe9C3Ab6b9590F8302e81",
     "first_seen": "2025-05-22 14:17:10",
-    "count": 119115,
-    "last_seen": "2025-05-24 15:03:45",
+    "count": 119200,
+    "last_seen": "2025-05-24 15:04:06",
     "rank": 2
   },
   "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c": {
@@ -28,8 +28,8 @@
     "total_supply": "1317829891611381695445139",
     "address": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
     "first_seen": "2025-05-22 14:17:00",
-    "count": 43049,
-    "last_seen": "2025-05-24 15:03:47",
+    "count": 43084,
+    "last_seen": "2025-05-24 15:04:05",
     "rank": 3
   },
   "0x783c3f003f172c6Ac5AC700218a357d2D66Ee2a2": {
@@ -39,8 +39,8 @@
     "total_supply": "210000000000000000000000000",
     "address": "0x783c3f003f172c6Ac5AC700218a357d2D66Ee2a2",
     "first_seen": "2025-05-22 14:17:11",
-    "count": 35328,
-    "last_seen": "2025-05-24 15:03:48",
+    "count": 35367,
+    "last_seen": "2025-05-24 15:04:05",
     "rank": 4
   },
   "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d": {
@@ -50,8 +50,8 @@
     "total_supply": "898999979839804027446539541",
     "address": "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d",
     "first_seen": "2025-05-22 14:17:04",
-    "count": 30211,
-    "last_seen": "2025-05-24 15:03:42",
+    "count": 30233,
+    "last_seen": "2025-05-24 15:04:06",
     "rank": 5
   },
   "0xe6DF05CE8C8301223373CF5B969AFCb1498c5528": {
@@ -61,8 +61,8 @@
     "total_supply": "3380000000000000000000000",
     "address": "0xe6DF05CE8C8301223373CF5B969AFCb1498c5528",
     "first_seen": "2025-05-22 14:17:14",
-    "count": 19867,
-    "last_seen": "2025-05-24 15:03:38",
+    "count": 19900,
+    "last_seen": "2025-05-24 15:04:07",
     "rank": 6
   },
   "0xa0c56a8c0692bD10B3fA8f8bA79Cf5332B7107F9": {
@@ -72,8 +72,8 @@
     "total_supply": "51350287191523000000000000",
     "address": "0xa0c56a8c0692bD10B3fA8f8bA79Cf5332B7107F9",
     "first_seen": "2025-05-22 14:17:04",
-    "count": 7450,
-    "last_seen": "2025-05-24 15:02:53",
+    "count": 7458,
+    "last_seen": "2025-05-24 15:03:57",
     "rank": 7
   },
   "0x0513d55289Dc7b95ae8FD45f4095c17F125FE784": {
@@ -83,8 +83,8 @@
     "total_supply": "10000000000000000000000000000",
     "address": "0x0513d55289Dc7b95ae8FD45f4095c17F125FE784",
     "first_seen": "2025-05-22 14:17:24",
-    "count": 5045,
-    "last_seen": "2025-05-24 15:03:33",
+    "count": 5053,
+    "last_seen": "2025-05-24 15:03:54",
     "rank": 8
   },
   "0x92aa03137385F18539301349dcfC9EbC923fFb10": {
@@ -94,8 +94,8 @@
     "total_supply": "1000000000000000000000000000",
     "address": "0x92aa03137385F18539301349dcfC9EbC923fFb10",
     "first_seen": "2025-05-22 14:17:12",
-    "count": 4980,
-    "last_seen": "2025-05-24 15:03:25",
+    "count": 4983,
+    "last_seen": "2025-05-24 15:03:56",
     "rank": 9
   },
   "0x07672f5a5553249d65A20d05E1ACa78924fd5476": {
@@ -116,8 +116,8 @@
     "total_supply": "2122962261596654088797728777",
     "address": "0x8d0D000Ee44948FC98c9B98A4FA4921476f08B0d",
     "first_seen": "2025-05-22 14:17:06",
-    "count": 3702,
-    "last_seen": "2025-05-24 15:03:47",
+    "count": 3704,
+    "last_seen": "2025-05-24 15:03:48",
     "rank": 11
   },
   "0x55ad16Bd573B3365f43A9dAeB0Cc66A73821b4a5": {
@@ -149,8 +149,8 @@
     "total_supply": "7622477369928349",
     "address": "0x194B302a4b0a79795Fb68E2ADf1B8c9eC5ff8d1F",
     "first_seen": "2025-05-22 14:17:18",
-    "count": 2437,
-    "last_seen": "2025-05-24 15:03:19",
+    "count": 2443,
+    "last_seen": "2025-05-24 15:03:58",
     "rank": 14
   },
   "0x3AeE7602b612de36088F3ffEd8c8f10E86EbF2bF": {
@@ -160,8 +160,8 @@
     "total_supply": "488250000000000000000000000",
     "address": "0x3AeE7602b612de36088F3ffEd8c8f10E86EbF2bF",
     "first_seen": "2025-05-22 14:17:05",
-    "count": 1992,
-    "last_seen": "2025-05-24 15:03:43",
+    "count": 1994,
+    "last_seen": "2025-05-24 15:04:02",
     "rank": 15
   },
   "0x6bdcCe4A559076e37755a78Ce0c06214E59e4444": {
@@ -204,8 +204,8 @@
     "total_supply": "604999999958821101704211",
     "address": "0x2170Ed0880ac9A755fd29B2688956BD959F933F8",
     "first_seen": "2025-05-22 14:20:05",
-    "count": 1432,
-    "last_seen": "2025-05-24 15:02:45",
+    "count": 1433,
+    "last_seen": "2025-05-24 15:03:52",
     "rank": 19
   },
   "0x9C8B5CA345247396bDfAc0395638ca9045C6586E": {
@@ -237,8 +237,8 @@
     "total_supply": "1000000000000000000000000000",
     "address": "0x0e05D8E4A5D2c8ac4A1F4Ff398075BEbd0044444",
     "first_seen": "2025-05-22 14:17:01",
-    "count": 1108,
-    "last_seen": "2025-05-24 14:41:56",
+    "count": 1109,
+    "last_seen": "2025-05-24 15:03:58",
     "rank": 22
   },
   "0x74836cC0E821A6bE18e407E6388E430B689C66e9": {
@@ -248,8 +248,8 @@
     "total_supply": "14600000000000000000000000000000000",
     "address": "0x74836cC0E821A6bE18e407E6388E430B689C66e9",
     "first_seen": "2025-05-22 14:18:03",
-    "count": 1026,
-    "last_seen": "2025-05-24 15:02:47",
+    "count": 1037,
+    "last_seen": "2025-05-24 15:04:01",
     "rank": 23
   },
   "0xD82544bf0dfe8385eF8FA34D67e6e4940CC63e16": {
@@ -259,8 +259,8 @@
     "total_supply": "1000000000000000000000000000",
     "address": "0xD82544bf0dfe8385eF8FA34D67e6e4940CC63e16",
     "first_seen": "2025-05-22 14:17:13",
-    "count": 970,
-    "last_seen": "2025-05-24 15:03:40",
+    "count": 972,
+    "last_seen": "2025-05-24 15:03:48",
     "rank": 24
   },
   "0x51cF4242AC4Bd24Ff6D13Be521CBa280962b4444": {
@@ -314,8 +314,8 @@
     "total_supply": "5000000000000000000000000000",
     "address": "0x5dBde81fcE337FF4bcaaEe4Ca3466C00aeCaE274",
     "first_seen": "2025-05-22 14:17:17",
-    "count": 787,
-    "last_seen": "2025-05-24 15:02:27",
+    "count": 791,
+    "last_seen": "2025-05-24 15:04:00",
     "rank": 29
   },
   "0x2d2D8449ec0bB78c497C36ffAaC583dFf4BD4444": {
@@ -369,8 +369,8 @@
     "total_supply": "100000000000000000000000000000",
     "address": "0xF263cC32caED261A819713f3Dcc494A96c3e5111",
     "first_seen": "2025-05-22 14:33:06",
-    "count": 489,
-    "last_seen": "2025-05-24 14:42:25",
+    "count": 493,
+    "last_seen": "2025-05-24 15:03:59",
     "rank": 34
   },
   "0xd55C9fB62E176a8Eb6968f32958FeFDD0962727E": {
@@ -413,8 +413,8 @@
     "total_supply": "3000000000000000000000000000",
     "address": "0x90869b3a42E399951bd5F5fF278B8CC5ee1Dc0fE",
     "first_seen": "2025-05-22 14:17:50",
-    "count": 408,
-    "last_seen": "2025-05-24 15:03:48",
+    "count": 412,
+    "last_seen": "2025-05-24 15:03:57",
     "rank": 38
   },
   "0x64716978A47E73069B4F91aBF0c9EAdC56a33fa7": {
@@ -504,8 +504,8 @@
     "total_supply": "9062133838403360000000000000",
     "address": "0x3Dc8e2d80b6215a1BCcAe4d38715C3520581E77c",
     "first_seen": "2025-05-22 14:18:05",
-    "count": 344,
-    "last_seen": "2025-05-24 15:03:24",
+    "count": 345,
+    "last_seen": "2025-05-24 15:04:06",
     "rank": 46
   },
   "0xafa381D908fd736CA58F232A9908B4ebB2dD412c": {
@@ -647,8 +647,8 @@
     "total_supply": "100000000000000000000000000",
     "address": "0x3faA71A370f51Ffee07BfD1a722d7c03DC170DeE",
     "first_seen": "2025-05-22 14:22:13",
-    "count": 288,
-    "last_seen": "2025-05-24 15:02:11",
+    "count": 290,
+    "last_seen": "2025-05-24 15:03:59",
     "rank": 59
   },
   "0x612A8770649aff0C9838c4Fbd5e5e546C4DD3D7C": {
@@ -783,6 +783,17 @@
     "last_seen": "2025-05-24 14:53:11",
     "rank": 71
   },
+  "0x589e1c953BCB822a2094Fd8C7cBbD84A7762Fb04": {
+    "name": "Pancake LPs",
+    "symbol": "Cake-LP",
+    "decimals": 18,
+    "total_supply": "3000790532803081196331479007",
+    "address": "0x589e1c953BCB822a2094Fd8C7cBbD84A7762Fb04",
+    "first_seen": "2025-05-22 14:24:45",
+    "count": 214,
+    "last_seen": "2025-05-24 15:04:01",
+    "rank": 72
+  },
   "0xAb8ea6ecD30Bf3b251be25f23b9Ae2044A50A2A3": {
     "name": "World Liberty Financial USD",
     "symbol": "USD1",
@@ -792,17 +803,6 @@
     "first_seen": "2025-05-22 14:39:48",
     "count": 212,
     "last_seen": "2025-05-22 16:46:16",
-    "rank": 72
-  },
-  "0x589e1c953BCB822a2094Fd8C7cBbD84A7762Fb04": {
-    "name": "Pancake LPs",
-    "symbol": "Cake-LP",
-    "decimals": 18,
-    "total_supply": "3000790532803081196331479007",
-    "address": "0x589e1c953BCB822a2094Fd8C7cBbD84A7762Fb04",
-    "first_seen": "2025-05-22 14:24:45",
-    "count": 212,
-    "last_seen": "2025-05-24 15:02:14",
     "rank": 73
   },
   "0xBA08D91491B493A394ab128b2B8AB823717E4444": {
@@ -878,8 +878,8 @@
     "total_supply": "980000000000000000000000",
     "address": "0xE26a492cED210bD84e11147e8AeC84B23390f22e",
     "first_seen": "2025-05-22 14:19:08",
-    "count": 181,
-    "last_seen": "2025-05-24 15:02:48",
+    "count": 182,
+    "last_seen": "2025-05-24 15:03:53",
     "rank": 80
   },
   "0x74da4c5F8C254dd4Fb39F9804C0924F52a808318": {
@@ -1146,6 +1146,17 @@
     "last_seen": "2025-05-24 15:03:11",
     "rank": 104
   },
+  "0x74f69E825beCFE835d453851B2d0Ba046207191F": {
+    "name": "JagerBnb",
+    "symbol": "JagerBnb",
+    "decimals": 18,
+    "total_supply": "13329210338990804389113761303",
+    "address": "0x74f69E825beCFE835d453851B2d0Ba046207191F",
+    "first_seen": "2025-05-22 14:24:45",
+    "count": 120,
+    "last_seen": "2025-05-24 15:04:01",
+    "rank": 105
+  },
   "0x5C82335CDBd26851dD4e7b0F31ab1b45929B7976": {
     "name": "MTC",
     "symbol": "MTC",
@@ -1155,19 +1166,8 @@
     "first_seen": "2025-05-24 13:51:25",
     "count": 120,
     "last_seen": "2025-05-24 14:26:55",
-    "rank": 105,
+    "rank": 106,
     "is_lp": false
-  },
-  "0x74f69E825beCFE835d453851B2d0Ba046207191F": {
-    "name": "JagerBnb",
-    "symbol": "JagerBnb",
-    "decimals": 18,
-    "total_supply": "13329210338990804389113761303",
-    "address": "0x74f69E825beCFE835d453851B2d0Ba046207191F",
-    "first_seen": "2025-05-22 14:24:45",
-    "count": 119,
-    "last_seen": "2025-05-24 15:02:14",
-    "rank": 106
   },
   "0x7aAAA5B10f97321345ACd76945083141bE1C5631": {
     "name": "Cowcoin",
@@ -1863,6 +1863,17 @@
     "last_seen": "2025-05-24 14:09:18",
     "rank": 169
   },
+  "0x5e934f21a04dFC566f0157d7720eB7A2d2582ACa": {
+    "name": "OPC",
+    "symbol": "OPC",
+    "decimals": 18,
+    "total_supply": "210000000000000000000000000000",
+    "address": "0x5e934f21a04dFC566f0157d7720eB7A2d2582ACa",
+    "first_seen": "2025-05-22 14:18:33",
+    "count": 58,
+    "last_seen": "2025-05-24 15:03:59",
+    "rank": 170
+  },
   "0x2B5D9ADea07B590b638FFc165792b2C610EdA649": {
     "name": "Cakepie",
     "symbol": "CKP",
@@ -1872,17 +1883,6 @@
     "first_seen": "2025-05-22 14:22:57",
     "count": 57,
     "last_seen": "2025-05-24 14:08:38",
-    "rank": 170
-  },
-  "0x5e934f21a04dFC566f0157d7720eB7A2d2582ACa": {
-    "name": "OPC",
-    "symbol": "OPC",
-    "decimals": 18,
-    "total_supply": "210000000000000000000000000000",
-    "address": "0x5e934f21a04dFC566f0157d7720eB7A2d2582ACa",
-    "first_seen": "2025-05-22 14:18:33",
-    "count": 57,
-    "last_seen": "2025-05-24 15:01:43",
     "rank": 171
   },
   "0xF3d9A9ec890587f4f7aEB4908f2fab6884999999": {
@@ -1896,6 +1896,17 @@
     "last_seen": "2025-05-24 14:48:36",
     "rank": 172
   },
+  "0x42fE1937E1db4F11509e9f7FdD97048BD8d04444": {
+    "name": "Salamanca",
+    "symbol": "DON",
+    "decimals": 18,
+    "total_supply": "1000000000000000000000000000",
+    "address": "0x42fE1937E1db4F11509e9f7FdD97048BD8d04444",
+    "first_seen": "2025-05-22 14:20:19",
+    "count": 57,
+    "last_seen": "2025-05-24 15:03:51",
+    "rank": 173
+  },
   "0xF2530aBC7cb0d5AF0fEc2f48de86cdedD8ac0d3B": {
     "name": "s Data Global Token",
     "symbol": "sDG",
@@ -1905,7 +1916,7 @@
     "first_seen": "2025-05-22 14:46:17",
     "count": 57,
     "last_seen": "2025-05-24 15:02:03",
-    "rank": 173
+    "rank": 174
   },
   "0xb080B94052f039eC2CA8BBaF7Ec13329d1926973": {
     "name": "Mind Network Agent",
@@ -1916,7 +1927,7 @@
     "first_seen": "2025-05-22 16:14:19",
     "count": 57,
     "last_seen": "2025-05-24 15:03:45",
-    "rank": 174
+    "rank": 175
   },
   "0x705d41072f894aab9e704181962A82225E3E4444": {
     "name": "P",
@@ -1927,7 +1938,7 @@
     "first_seen": "2025-05-24 13:19:58",
     "count": 57,
     "last_seen": "2025-05-24 15:00:47",
-    "rank": 175,
+    "rank": 176,
     "is_lp": false
   },
   "0xB841C18Afa2043D51197262Ca376aEbd61486832": {
@@ -1939,7 +1950,7 @@
     "first_seen": "2025-05-22 14:19:21",
     "count": 56,
     "last_seen": "2025-05-22 16:51:18",
-    "rank": 176
+    "rank": 177
   },
   "0x2DB48Fdd567910C42a887ddC342b2932967a2c4d": {
     "name": "MIGO",
@@ -1950,7 +1961,7 @@
     "first_seen": "2025-05-22 14:30:00",
     "count": 55,
     "last_seen": "2025-05-24 14:51:43",
-    "rank": 177
+    "rank": 178
   },
   "0x700735317e1af4687C17F5C30E11a74778395922": {
     "name": "MeshChainCoin",
@@ -1961,17 +1972,6 @@
     "first_seen": "2025-05-22 14:18:23",
     "count": 55,
     "last_seen": "2025-05-24 14:55:59",
-    "rank": 178
-  },
-  "0x42fE1937E1db4F11509e9f7FdD97048BD8d04444": {
-    "name": "Salamanca",
-    "symbol": "DON",
-    "decimals": 18,
-    "total_supply": "1000000000000000000000000000",
-    "address": "0x42fE1937E1db4F11509e9f7FdD97048BD8d04444",
-    "first_seen": "2025-05-22 14:20:19",
-    "count": 55,
-    "last_seen": "2025-05-24 15:03:27",
     "rank": 179
   },
   "0x722294F6c97102fB0DDb5b907c8d16BDEAB3f6D9": {
@@ -2091,8 +2091,8 @@
     "total_supply": "992029975073080000000000000",
     "address": "0x350e52BB0F874f3B558A3679aac24268Ee37A699",
     "first_seen": "2025-05-22 14:19:52",
-    "count": 50,
-    "last_seen": "2025-05-24 14:59:20",
+    "count": 51,
+    "last_seen": "2025-05-24 15:03:58",
     "rank": 190
   },
   "0x523D5FE707EA46EbE25ADcA1F58F1ee0a41E46b0": {
@@ -2988,6 +2988,17 @@
     "last_seen": "2025-05-24 13:23:11",
     "rank": 271
   },
+  "0xF35C6498192ba79b26DCC1a94Bf8631a88888888": {
+    "name": "CosmBank",
+    "symbol": "CSM",
+    "decimals": 9,
+    "total_supply": "185423283988037",
+    "address": "0xF35C6498192ba79b26DCC1a94Bf8631a88888888",
+    "first_seen": "2025-05-22 14:31:27",
+    "count": 31,
+    "last_seen": "2025-05-24 15:03:53",
+    "rank": 272
+  },
   "0xDc06717F367e57A16e06CcE0c4761604460da8Fc": {
     "name": "BNB Card",
     "symbol": "BNB Card",
@@ -2997,7 +3008,7 @@
     "first_seen": "2025-05-22 14:52:09",
     "count": 31,
     "last_seen": "2025-05-24 15:02:37",
-    "rank": 272
+    "rank": 273
   },
   "0xcF640FDF9b3d9E45cbd69fDA91D7e22579c14444": {
     "name": "gorilla",
@@ -3008,7 +3019,7 @@
     "first_seen": "2025-05-22 14:44:01",
     "count": 31,
     "last_seen": "2025-05-24 14:48:02",
-    "rank": 273
+    "rank": 274
   },
   "0x3ca729BFD4bbaD155f072752510226b37A5b7723": {
     "name": "AGON Agent",
@@ -3019,7 +3030,7 @@
     "first_seen": "2025-05-22 14:43:03",
     "count": 31,
     "last_seen": "2025-05-24 15:02:07",
-    "rank": 274
+    "rank": 275
   },
   "0xFA093Eafe552ac3E3046F50a68fDf8C86d47e1Cc": {
     "name": "FUTURE",
@@ -3030,7 +3041,7 @@
     "first_seen": "2025-05-22 14:21:46",
     "count": 30,
     "last_seen": "2025-05-22 14:58:26",
-    "rank": 275
+    "rank": 276
   },
   "0x75A52196012ca777b94265F8c3eFEEF5693cE981": {
     "name": "Platinum",
@@ -3041,7 +3052,7 @@
     "first_seen": "2025-05-22 14:36:21",
     "count": 30,
     "last_seen": "2025-05-22 15:18:50",
-    "rank": 276
+    "rank": 277
   },
   "0x3a6f79CECfA4FafBe7514D4D5fA85D3665939E89": {
     "name": "Purple",
@@ -3052,7 +3063,7 @@
     "first_seen": "2025-05-22 14:36:23",
     "count": 30,
     "last_seen": "2025-05-22 15:02:31",
-    "rank": 277
+    "rank": 278
   },
   "0x659c38492eEC767E4382B0a712F2e6Ccd6DFE9e0": {
     "name": "B",
@@ -3063,7 +3074,7 @@
     "first_seen": "2025-05-22 14:56:31",
     "count": 30,
     "last_seen": "2025-05-22 16:35:41",
-    "rank": 278
+    "rank": 279
   },
   "0x5FBD7098346eD94Dd8d462fad40Bb1D5FdA9D815": {
     "name": "BTS Token",
@@ -3074,7 +3085,7 @@
     "first_seen": "2025-05-22 14:23:56",
     "count": 30,
     "last_seen": "2025-05-24 14:38:24",
-    "rank": 279
+    "rank": 280
   },
   "0x8F0528cE5eF7B51152A59745bEfDD91D97091d2F": {
     "name": "AlpacaToken",
@@ -3085,7 +3096,7 @@
     "first_seen": "2025-05-22 14:23:18",
     "count": 30,
     "last_seen": "2025-05-24 14:35:24",
-    "rank": 280
+    "rank": 281
   },
   "0xc950e3Cf17C6831AD8214527656Aa64cC7777777": {
     "name": "POPMART",
@@ -3096,7 +3107,7 @@
     "first_seen": "2025-05-22 14:22:32",
     "count": 30,
     "last_seen": "2025-05-24 14:39:00",
-    "rank": 281
+    "rank": 282
   },
   "0xD7368cc014B16666e7C33D239b70Cd5f71564444": {
     "name": "USD1CAT",
@@ -3107,7 +3118,7 @@
     "first_seen": "2025-05-22 14:34:28",
     "count": 30,
     "last_seen": "2025-05-24 14:53:11",
-    "rank": 282
+    "rank": 283
   },
   "0x7E60C74b9096f8FA6fb5a9FD88405dED8B7D44f3": {
     "name": "INFIBLUE WORLD",
@@ -3118,7 +3129,7 @@
     "first_seen": "2025-05-22 14:18:12",
     "count": 30,
     "last_seen": "2025-05-24 14:42:28",
-    "rank": 283
+    "rank": 284
   },
   "0xC13B7a43223BB9Bf4B69BD68Ab20ca1B79d81C75": {
     "name": "Juggernaut DeFi",
@@ -3129,7 +3140,7 @@
     "first_seen": "2025-05-22 15:10:31",
     "count": 30,
     "last_seen": "2025-05-24 14:30:00",
-    "rank": 284
+    "rank": 285
   },
   "0x3A288CEe8a1380d0C07F2953dA868744C9112Fc6": {
     "name": "FD",
@@ -3140,17 +3151,6 @@
     "first_seen": "2025-05-22 14:21:28",
     "count": 30,
     "last_seen": "2025-05-24 13:45:40",
-    "rank": 285
-  },
-  "0xF35C6498192ba79b26DCC1a94Bf8631a88888888": {
-    "name": "CosmBank",
-    "symbol": "CSM",
-    "decimals": 9,
-    "total_supply": "185423283988037",
-    "address": "0xF35C6498192ba79b26DCC1a94Bf8631a88888888",
-    "first_seen": "2025-05-22 14:31:27",
-    "count": 30,
-    "last_seen": "2025-05-24 14:50:55",
     "rank": 286
   },
   "0xf388Ee045CAb30321db3fb69EAb7DfB0c20f10EC": {
@@ -3615,6 +3615,17 @@
     "last_seen": "2025-05-24 14:43:45",
     "rank": 328
   },
+  "0xE2B16F618EB6016BC2625E98335F1844Ee90236A": {
+    "name": "GameM Token",
+    "symbol": "GMT",
+    "decimals": 18,
+    "total_supply": "2600000000000000000000000000",
+    "address": "0xE2B16F618EB6016BC2625E98335F1844Ee90236A",
+    "first_seen": "2025-05-22 14:22:05",
+    "count": 24,
+    "last_seen": "2025-05-24 15:03:51",
+    "rank": 329
+  },
   "0x7eDC0eC89F987ECd85617b891c44fE462a325869": {
     "name": "Gunstar Metaverse",
     "symbol": "GST",
@@ -3624,7 +3635,7 @@
     "first_seen": "2025-05-22 15:08:23",
     "count": 24,
     "last_seen": "2025-05-24 15:01:44",
-    "rank": 329
+    "rank": 330
   },
   "0x215324115417a13879f865Dc5BB651B18A781a59": {
     "name": "KLK Option",
@@ -3635,7 +3646,7 @@
     "first_seen": "2025-05-22 15:21:29",
     "count": 24,
     "last_seen": "2025-05-24 14:52:48",
-    "rank": 330
+    "rank": 331
   },
   "0xd27aaeead8FdE08Ba292c1E08f53a14c00e7f7c8": {
     "name": "zksync",
@@ -3646,7 +3657,7 @@
     "first_seen": "2025-05-22 14:19:11",
     "count": 24,
     "last_seen": "2025-05-24 14:40:02",
-    "rank": 331
+    "rank": 332
   },
   "0xCAAE2A2F939F51d97CdFa9A86e79e3F085b799f3": {
     "name": "Tutorial",
@@ -3657,7 +3668,7 @@
     "first_seen": "2025-05-22 14:41:58",
     "count": 23,
     "last_seen": "2025-05-22 16:40:49",
-    "rank": 332
+    "rank": 333
   },
   "0x4C882ec256823eE773B25b414d36F92ef58a7c0C": {
     "name": "pStake Finance",
@@ -3668,7 +3679,7 @@
     "first_seen": "2025-05-22 15:08:35",
     "count": 23,
     "last_seen": "2025-05-22 16:51:17",
-    "rank": 333
+    "rank": 334
   },
   "0x474FA9972E80D6cb41aa6Cec9dA666A3f1DAd2F4": {
     "name": "Money",
@@ -3679,7 +3690,7 @@
     "first_seen": "2025-05-22 14:23:30",
     "count": 23,
     "last_seen": "2025-05-24 14:15:33",
-    "rank": 334
+    "rank": 335
   },
   "0x90c48855Bb69f9D2C261Efd0D8C7F35990F2dd6f": {
     "name": "WFI",
@@ -3690,7 +3701,7 @@
     "first_seen": "2025-05-22 14:19:12",
     "count": 23,
     "last_seen": "2025-05-24 14:49:24",
-    "rank": 335
+    "rank": 336
   },
   "0x9eC02756A559700d8D9e79ECe56809f7bcC5dC27": {
     "name": "why",
@@ -3701,17 +3712,6 @@
     "first_seen": "2025-05-22 15:18:09",
     "count": 23,
     "last_seen": "2025-05-24 14:21:02",
-    "rank": 336
-  },
-  "0xE2B16F618EB6016BC2625E98335F1844Ee90236A": {
-    "name": "GameM Token",
-    "symbol": "GMT",
-    "decimals": 18,
-    "total_supply": "2600000000000000000000000000",
-    "address": "0xE2B16F618EB6016BC2625E98335F1844Ee90236A",
-    "first_seen": "2025-05-22 14:22:05",
-    "count": 23,
-    "last_seen": "2025-05-24 14:55:04",
     "rank": 337
   },
   "0xfb6115445Bff7b52FeB98650C87f44907E58f802": {
@@ -3868,6 +3868,17 @@
     "last_seen": "2025-05-24 14:57:23",
     "rank": 351
   },
+  "0xA52aF2f02fc0A54d48431A520A1103bd20084444": {
+    "name": "LongZhou",
+    "symbol": "LongZhou",
+    "decimals": 18,
+    "total_supply": "1000000000000000000000000000",
+    "address": "0xA52aF2f02fc0A54d48431A520A1103bd20084444",
+    "first_seen": "2025-05-24 13:14:02",
+    "count": 22,
+    "last_seen": "2025-05-24 15:03:55",
+    "rank": 352
+  },
   "0x12f4DF60Ea3bD42b06a10887efDea2eBe532E855": {
     "name": "WTOS",
     "symbol": "WTOS",
@@ -3877,7 +3888,7 @@
     "first_seen": "2025-05-22 14:29:33",
     "count": 21,
     "last_seen": "2025-05-22 16:50:22",
-    "rank": 352
+    "rank": 353
   },
   "0x333333C465a19C85f85c6CfbED7B16b0B26E3333": {
     "name": "ORA Coin",
@@ -3888,7 +3899,7 @@
     "first_seen": "2025-05-22 14:36:54",
     "count": 21,
     "last_seen": "2025-05-22 16:38:05",
-    "rank": 353
+    "rank": 354
   },
   "0x042Cb850410394d30Bd400FE4A8f704a5F7B4444": {
     "name": "$1,100,000,000 Coin",
@@ -3899,7 +3910,7 @@
     "first_seen": "2025-05-22 14:50:25",
     "count": 21,
     "last_seen": "2025-05-22 16:49:01",
-    "rank": 354
+    "rank": 355
   },
   "0x603c7f932ED1fc6575303D8Fb018fDCBb0f39a95": {
     "name": "ApeSwapFinance Banana",
@@ -3910,7 +3921,7 @@
     "first_seen": "2025-05-22 14:59:22",
     "count": 21,
     "last_seen": "2025-05-22 15:20:36",
-    "rank": 355
+    "rank": 356
   },
   "0x99945f484EBc48F5307cC00cF8dCF8d6D3d4B017": {
     "name": "SwiftCash Team Wrapped SWIFT",
@@ -3921,7 +3932,7 @@
     "first_seen": "2025-05-22 15:14:56",
     "count": 21,
     "last_seen": "2025-05-22 16:20:40",
-    "rank": 356
+    "rank": 357
   },
   "0x78F5d389F5CDCcFc41594aBaB4B0Ed02F31398b3": {
     "name": "ApolloX Token",
@@ -3932,7 +3943,7 @@
     "first_seen": "2025-05-22 14:30:08",
     "count": 21,
     "last_seen": "2025-05-24 14:48:13",
-    "rank": 357
+    "rank": 358
   },
   "0xD723f2aEA80d1620864ac059F34f168fa223B2f1": {
     "name": "KXG",
@@ -3943,7 +3954,7 @@
     "first_seen": "2025-05-22 14:58:50",
     "count": 21,
     "last_seen": "2025-05-24 13:21:39",
-    "rank": 358
+    "rank": 359
   },
   "0x4BD17003473389A42DAF6a0a729f6Fdb328BbBd7": {
     "name": "VAI Stablecoin",
@@ -3954,7 +3965,7 @@
     "first_seen": "2025-05-22 14:56:39",
     "count": 21,
     "last_seen": "2025-05-24 14:40:16",
-    "rank": 359
+    "rank": 360
   },
   "0xcDBBEd5606d9c5C98eEedd67933991dC17F0c68d": {
     "name": "Aave BNB Smart Chain Variable Debt USDC",
@@ -3965,7 +3976,7 @@
     "first_seen": "2025-05-22 14:18:01",
     "count": 21,
     "last_seen": "2025-05-24 14:26:42",
-    "rank": 360
+    "rank": 361
   },
   "0x6Ec90334d89dBdc89E08A133271be3d104128Edb": {
     "name": "WIKI CAT",
@@ -3976,17 +3987,6 @@
     "first_seen": "2025-05-22 14:43:48",
     "count": 21,
     "last_seen": "2025-05-24 13:46:38",
-    "rank": 361
-  },
-  "0xA52aF2f02fc0A54d48431A520A1103bd20084444": {
-    "name": "LongZhou",
-    "symbol": "LongZhou",
-    "decimals": 18,
-    "total_supply": "1000000000000000000000000000",
-    "address": "0xA52aF2f02fc0A54d48431A520A1103bd20084444",
-    "first_seen": "2025-05-24 13:14:02",
-    "count": 21,
-    "last_seen": "2025-05-24 14:59:25",
     "rank": 362
   },
   "0xC7d9A24857ff8Ccc2A6BD64C3ba604f39795b6A4": {
@@ -4277,6 +4277,17 @@
     "last_seen": "2025-05-24 14:31:58",
     "rank": 388
   },
+  "0x27cc3945b515a81B82450c3AC8344dAF42A1187F": {
+    "name": "PANDA Token",
+    "symbol": "PANDA",
+    "decimals": 18,
+    "total_supply": "10000000000000000000000000000",
+    "address": "0x27cc3945b515a81B82450c3AC8344dAF42A1187F",
+    "first_seen": "2025-05-22 14:47:21",
+    "count": 19,
+    "last_seen": "2025-05-24 15:03:54",
+    "rank": 389
+  },
   "0x8fF795a6F4D97E7887C79beA79aba5cc76444aDf": {
     "name": "Bitcoin Cash Token",
     "symbol": "BCH",
@@ -4286,7 +4297,7 @@
     "first_seen": "2025-05-22 14:56:35",
     "count": 19,
     "last_seen": "2025-05-24 14:57:28",
-    "rank": 389
+    "rank": 390
   },
   "0x9D8A4F4D71dABEE7F6e1e0dEd66608621c4ac788": {
     "name": "Pancake LPs",
@@ -4297,7 +4308,7 @@
     "first_seen": "2025-05-22 14:19:25",
     "count": 18,
     "last_seen": "2025-05-22 15:52:17",
-    "rank": 390
+    "rank": 391
   },
   "0x4E1B10BE34ec6225b37Dfa43A3adC9D4B793e9e3": {
     "name": "Listadog",
@@ -4308,7 +4319,7 @@
     "first_seen": "2025-05-22 14:38:38",
     "count": 18,
     "last_seen": "2025-05-22 16:21:39",
-    "rank": 391
+    "rank": 392
   },
   "0x4FA7163E153419E0E1064e418dd7A99314Ed27b6": {
     "name": "Hot Cross Token",
@@ -4319,7 +4330,7 @@
     "first_seen": "2025-05-22 14:56:36",
     "count": 18,
     "last_seen": "2025-05-22 16:22:00",
-    "rank": 392
+    "rank": 393
   },
   "0xA4b9BA0A8CD1A183fd9B0A235D719286AdDC2bcb": {
     "name": "RiceQuant BTC",
@@ -4330,7 +4341,7 @@
     "first_seen": "2025-05-22 15:01:51",
     "count": 18,
     "last_seen": "2025-05-22 15:20:35",
-    "rank": 393
+    "rank": 394
   },
   "0xd5369a3CaC0f4448A9A96bb98AF9c887c92fC37B": {
     "name": "Bubb",
@@ -4341,7 +4352,7 @@
     "first_seen": "2025-05-22 15:27:37",
     "count": 18,
     "last_seen": "2025-05-22 16:07:47",
-    "rank": 394
+    "rank": 395
   },
   "0x5A3010d4d8D3B5fB49f8B6E57FB9E48063f16700": {
     "name": "BSCPAD.com",
@@ -4352,7 +4363,7 @@
     "first_seen": "2025-05-22 15:35:27",
     "count": 18,
     "last_seen": "2025-05-22 16:34:23",
-    "rank": 395
+    "rank": 396
   },
   "0x45b07DF4FE00202dd31F2D95f6C06f3A029625D5": {
     "name": "Nyan Token",
@@ -4363,7 +4374,7 @@
     "first_seen": "2025-05-22 16:07:08",
     "count": 18,
     "last_seen": "2025-05-22 16:37:09",
-    "rank": 396
+    "rank": 397
   },
   "0xA838c1DFD1dD7A78a21eaA05805C7feCBa29Faf6": {
     "name": "DAOCO",
@@ -4374,7 +4385,7 @@
     "first_seen": "2025-05-22 14:18:02",
     "count": 18,
     "last_seen": "2025-05-24 13:14:11",
-    "rank": 397
+    "rank": 398
   },
   "0x082eC980dEe12cd318c51B6D0518Ba27F8E74444": {
     "name": "Universe Boss Coin",
@@ -4385,7 +4396,7 @@
     "first_seen": "2025-05-22 14:21:31",
     "count": 18,
     "last_seen": "2025-05-24 13:58:30",
-    "rank": 398
+    "rank": 399
   },
   "0xC70b4E2F16f45b196Ea782773E78a393CADB2911": {
     "name": "ReelDAO Token V2",
@@ -4396,7 +4407,7 @@
     "first_seen": "2025-05-22 14:21:47",
     "count": 18,
     "last_seen": "2025-05-24 14:34:05",
-    "rank": 399
+    "rank": 400
   },
   "0xDe6E12BDB2062Dc48B409f0086219464a0C317a0": {
     "name": "NIAO",
@@ -4407,7 +4418,7 @@
     "first_seen": "2025-05-22 14:38:49",
     "count": 18,
     "last_seen": "2025-05-24 15:00:26",
-    "rank": 400
+    "rank": 401
   },
   "0xDe04da55B74435d7B9f2C5c62D9F1b53929b09AA": {
     "name": "AICell",
@@ -4418,7 +4429,7 @@
     "first_seen": "2025-05-22 14:29:09",
     "count": 18,
     "last_seen": "2025-05-24 14:33:13",
-    "rank": 401
+    "rank": 402
   },
   "0x7Ce93CAf648b0b6285A7389C2505FAF039E90d0D": {
     "name": "CICI Token",
@@ -4429,7 +4440,7 @@
     "first_seen": "2025-05-22 14:29:48",
     "count": 18,
     "last_seen": "2025-05-24 13:49:59",
-    "rank": 402
+    "rank": 403
   },
   "0x2CB057f1fb8E12571BC92f25f619FcdBc63d1656": {
     "name": "Satgirl",
@@ -4440,7 +4451,7 @@
     "first_seen": "2025-05-22 14:34:44",
     "count": 18,
     "last_seen": "2025-05-24 14:57:44",
-    "rank": 403
+    "rank": 404
   },
   "0xabE8E5CabE24Cb36df9540088fD7cE1175b9bc52": {
     "name": "Solv",
@@ -4451,7 +4462,7 @@
     "first_seen": "2025-05-22 14:20:50",
     "count": 18,
     "last_seen": "2025-05-24 15:00:23",
-    "rank": 404
+    "rank": 405
   },
   "0xcCa6C41E072f02bb0E05C54749d3243b87044aAA": {
     "name": "Mi",
@@ -4462,7 +4473,7 @@
     "first_seen": "2025-05-22 14:29:58",
     "count": 18,
     "last_seen": "2025-05-24 15:00:47",
-    "rank": 405
+    "rank": 406
   },
   "0x649B3b88c6aBE5A50BFaC307Fb1Fd3dC6D200000": {
     "name": "MEME",
@@ -4473,7 +4484,7 @@
     "first_seen": "2025-05-24 13:20:47",
     "count": 18,
     "last_seen": "2025-05-24 14:24:05",
-    "rank": 406,
+    "rank": 407,
     "is_lp": false
   },
   "0x604448c8f009135e913C7e0E4Bef692B0003A02A": {
@@ -4485,7 +4496,7 @@
     "first_seen": "2025-05-24 13:26:55",
     "count": 18,
     "last_seen": "2025-05-24 14:46:06",
-    "rank": 407,
+    "rank": 408,
     "is_lp": false
   },
   "0x89F4e8011c35831130C4C3aB95e53de9411d2fCc": {
@@ -4497,7 +4508,7 @@
     "first_seen": "2025-05-22 14:17:20",
     "count": 17,
     "last_seen": "2025-05-22 16:47:56",
-    "rank": 408
+    "rank": 409
   },
   "0x75f835743854e66ec7C3E8B8039f32086918Ff88": {
     "name": "GOLD CHAIN",
@@ -4508,7 +4519,7 @@
     "first_seen": "2025-05-22 14:23:07",
     "count": 17,
     "last_seen": "2025-05-22 16:46:58",
-    "rank": 409
+    "rank": 410
   },
   "0x854D4AF6CEBebd6B6E49a67E0F976832EEa5FA7F": {
     "name": "Pride Coin",
@@ -4519,7 +4530,7 @@
     "first_seen": "2025-05-22 14:25:56",
     "count": 17,
     "last_seen": "2025-05-22 16:42:10",
-    "rank": 410
+    "rank": 411
   },
   "0x2fA4835460a9dB2a9065Ef13835e1571A63843F0": {
     "name": "Peepo",
@@ -4530,7 +4541,7 @@
     "first_seen": "2025-05-22 14:27:04",
     "count": 17,
     "last_seen": "2025-05-22 16:48:53",
-    "rank": 411
+    "rank": 412
   },
   "0xdb67328F12E37F3F5145Cf87B5c8d9bf2f719151": {
     "name": "ZQT",
@@ -4541,7 +4552,7 @@
     "first_seen": "2025-05-22 14:30:18",
     "count": 17,
     "last_seen": "2025-05-22 16:36:10",
-    "rank": 412
+    "rank": 413
   },
   "0xCA69C118Fa550387794d48900a866891217E5C9F": {
     "name": "Mocktail",
@@ -4552,7 +4563,7 @@
     "first_seen": "2025-05-22 14:36:23",
     "count": 17,
     "last_seen": "2025-05-22 16:04:51",
-    "rank": 413
+    "rank": 414
   },
   "0x46888e37cC183b76fEFa7f6B513073c5C9F84444": {
     "name": "LUCKGUY",
@@ -4563,7 +4574,7 @@
     "first_seen": "2025-05-22 15:16:45",
     "count": 17,
     "last_seen": "2025-05-22 16:18:09",
-    "rank": 414
+    "rank": 415
   },
   "0xC3440c10c4F36f354eB591B19FafB4906d449B75": {
     "name": "SparkPoint",
@@ -4574,7 +4585,7 @@
     "first_seen": "2025-05-22 15:16:55",
     "count": 17,
     "last_seen": "2025-05-22 15:20:09",
-    "rank": 415
+    "rank": 416
   },
   "0x2eD9a5C8C13b93955103B9a7C167B67Ef4d568a3": {
     "name": "Mask Network",
@@ -4585,7 +4596,7 @@
     "first_seen": "2025-05-22 15:49:29",
     "count": 17,
     "last_seen": "2025-05-24 13:21:26",
-    "rank": 416
+    "rank": 417
   },
   "0x653062e37D7A52d465A8570a5daA46cA4e0Bd3d9": {
     "name": "Forty Two DAO Token",
@@ -4596,7 +4607,7 @@
     "first_seen": "2025-05-22 14:20:31",
     "count": 17,
     "last_seen": "2025-05-24 14:42:34",
-    "rank": 417
+    "rank": 418
   },
   "0xa5b000d453143B357dbA63f4EE83F2f6FDa832b8": {
     "name": "Metya Token",
@@ -4607,7 +4618,7 @@
     "first_seen": "2025-05-22 14:24:46",
     "count": 17,
     "last_seen": "2025-05-24 14:39:24",
-    "rank": 418
+    "rank": 419
   },
   "0xf486ad071f3bEE968384D2E39e2D8aF0fCf6fd46": {
     "name": "VELO",
@@ -4618,7 +4629,7 @@
     "first_seen": "2025-05-22 14:42:18",
     "count": 17,
     "last_seen": "2025-05-24 14:23:36",
-    "rank": 419
+    "rank": 420
   },
   "0xD8A38Df79a42b1Cf93d6D9e62cF2fB9776666666": {
     "name": "HL",
@@ -4629,7 +4640,7 @@
     "first_seen": "2025-05-22 14:31:34",
     "count": 17,
     "last_seen": "2025-05-24 15:01:47",
-    "rank": 420
+    "rank": 421
   },
   "0x03fF0ff224f904be3118461335064bB48Df47938": {
     "name": "Harmony ONE",
@@ -4640,7 +4651,7 @@
     "first_seen": "2025-05-22 14:55:17",
     "count": 17,
     "last_seen": "2025-05-24 14:30:49",
-    "rank": 421
+    "rank": 422
   },
   "0xdAf1695c41327b61B9b9965Ac6A5843A3198cf07": {
     "name": "StakeStone",
@@ -4651,17 +4662,6 @@
     "first_seen": "2025-05-22 14:36:45",
     "count": 17,
     "last_seen": "2025-05-24 14:17:58",
-    "rank": 422
-  },
-  "0x27cc3945b515a81B82450c3AC8344dAF42A1187F": {
-    "name": "PANDA Token",
-    "symbol": "PANDA",
-    "decimals": 18,
-    "total_supply": "10000000000000000000000000000",
-    "address": "0x27cc3945b515a81B82450c3AC8344dAF42A1187F",
-    "first_seen": "2025-05-22 14:47:21",
-    "count": 17,
-    "last_seen": "2025-05-24 14:45:09",
     "rank": 423
   },
   "0x6eB6e8974264BeE01c160F1770a38f8e6dE1a3B1": {
@@ -6581,6 +6581,17 @@
     "last_seen": "2025-05-24 13:54:16",
     "rank": 596
   },
+  "0x4eA98c1999575aaadfb38237Dd015c5E773F75a2": {
+    "name": "MAGA",
+    "symbol": "TRUMP",
+    "decimals": 9,
+    "total_supply": "1353863991546400",
+    "address": "0x4eA98c1999575aaadfb38237Dd015c5E773F75a2",
+    "first_seen": "2025-05-22 15:13:26",
+    "count": 11,
+    "last_seen": "2025-05-24 15:03:52",
+    "rank": 597
+  },
   "0x5F020660044220366e2289fC9C6a9090651eE687": {
     "name": "tubeUSD",
     "symbol": "tubeUSD",
@@ -6590,7 +6601,7 @@
     "first_seen": "2025-05-22 14:19:29",
     "count": 11,
     "last_seen": "2025-05-24 14:42:34",
-    "rank": 597
+    "rank": 598
   },
   "0x3203c9E46cA618C8C1cE5dC67e7e9D75f5da2377": {
     "name": "Mobox",
@@ -6601,7 +6612,7 @@
     "first_seen": "2025-05-22 14:51:37",
     "count": 11,
     "last_seen": "2025-05-24 13:56:01",
-    "rank": 598
+    "rank": 599
   },
   "0x9E1170c12FDDd3B00FEc42ddF4C942565D9Be577": {
     "name": "Space Token",
@@ -6612,7 +6623,7 @@
     "first_seen": "2025-05-22 16:35:26",
     "count": 11,
     "last_seen": "2025-05-24 14:59:19",
-    "rank": 599
+    "rank": 600
   },
   "0x4a7E278C67543731A864C89e5EB28EaCfa8794EB": {
     "name": "Ncoin",
@@ -6623,7 +6634,7 @@
     "first_seen": "2025-05-22 14:22:27",
     "count": 11,
     "last_seen": "2025-05-24 14:11:29",
-    "rank": 600
+    "rank": 601
   },
   "0x83E727c7ea725c36Cd73CeaD709E7ecE48868e3D": {
     "name": "AiHub",
@@ -6634,7 +6645,7 @@
     "first_seen": "2025-05-22 14:21:29",
     "count": 11,
     "last_seen": "2025-05-24 14:28:16",
-    "rank": 601
+    "rank": 602
   },
   "0x1c1f83165B93f87d4fE26023b52C5C60299d613d": {
     "name": "NANA Coin",
@@ -6645,7 +6656,7 @@
     "first_seen": "2025-05-22 15:11:32",
     "count": 11,
     "last_seen": "2025-05-24 14:46:04",
-    "rank": 602
+    "rank": 603
   },
   "0xF3A587d1AC967b40DB59223434BAf0C6e11588EA": {
     "name": "SonorusToken",
@@ -6656,7 +6667,7 @@
     "first_seen": "2025-05-22 14:21:27",
     "count": 11,
     "last_seen": "2025-05-24 14:11:36",
-    "rank": 603
+    "rank": 604
   },
   "0xd41b1C813Ad0873a68dFa6Dc9E64bEB9a30D9253": {
     "name": "WAVE",
@@ -6667,7 +6678,7 @@
     "first_seen": "2025-05-22 15:43:31",
     "count": 11,
     "last_seen": "2025-05-24 13:27:32",
-    "rank": 604
+    "rank": 605
   },
   "0x9668e4D4Bec3919b56efD018472372433005d4Bd": {
     "name": "LandWolf BSC",
@@ -6678,7 +6689,7 @@
     "first_seen": "2025-05-24 13:29:44",
     "count": 11,
     "last_seen": "2025-05-24 14:54:06",
-    "rank": 605,
+    "rank": 606,
     "is_lp": false
   },
   "0x60e10A2319A2884C67493c8f85127639813decF5": {
@@ -6690,7 +6701,7 @@
     "first_seen": "2025-05-24 13:36:07",
     "count": 11,
     "last_seen": "2025-05-24 15:01:32",
-    "rank": 606,
+    "rank": 607,
     "is_lp": false
   },
   "0x6E88056E8376Ae7709496Ba64d37fa2f8015ce3e": {
@@ -6702,7 +6713,7 @@
     "first_seen": "2025-05-24 13:42:43",
     "count": 11,
     "last_seen": "2025-05-24 14:50:08",
-    "rank": 607,
+    "rank": 608,
     "is_lp": false
   },
   "0xffD22536cf2F2b62480BcBB95fe6c1b8Ea0FA8F0": {
@@ -6714,7 +6725,7 @@
     "first_seen": "2025-05-22 14:18:50",
     "count": 10,
     "last_seen": "2025-05-22 16:18:09",
-    "rank": 608
+    "rank": 609
   },
   "0xe1BEB6420dFAC67E39b2Ef9523eD9Aa8Fa774444": {
     "name": "pig",
@@ -6725,7 +6736,7 @@
     "first_seen": "2025-05-22 14:21:34",
     "count": 10,
     "last_seen": "2025-05-22 15:35:28",
-    "rank": 609
+    "rank": 610
   },
   "0x5556825429472e2B0243b34846a78Ea8B433b104": {
     "name": "Peepo",
@@ -6736,7 +6747,7 @@
     "first_seen": "2025-05-22 14:22:42",
     "count": 10,
     "last_seen": "2025-05-22 16:30:43",
-    "rank": 610
+    "rank": 611
   },
   "0x8856Ddc0F369B3B7BDD713b3a9100bE8177846Dc": {
     "name": "BUILDon",
@@ -6747,7 +6758,7 @@
     "first_seen": "2025-05-22 14:23:06",
     "count": 10,
     "last_seen": "2025-05-22 16:46:16",
-    "rank": 611
+    "rank": 612
   },
   "0xfA54fF1a158B5189Ebba6ae130CEd6bbd3aEA76e": {
     "name": "Wrapped SOL",
@@ -6758,7 +6769,7 @@
     "first_seen": "2025-05-22 14:23:13",
     "count": 10,
     "last_seen": "2025-05-22 16:01:57",
-    "rank": 612
+    "rank": 613
   },
   "0xF2c96E402c9199682d5dED26D3771c6B192c01af": {
     "name": "Scallop",
@@ -6769,7 +6780,7 @@
     "first_seen": "2025-05-22 14:23:45",
     "count": 10,
     "last_seen": "2025-05-22 15:00:17",
-    "rank": 613
+    "rank": 614
   },
   "0xb76959a7EcdE8cc3Cf64efeFA1B1f24b7c67cc9B": {
     "name": "STCCOIN",
@@ -6780,7 +6791,7 @@
     "first_seen": "2025-05-22 14:28:54",
     "count": 10,
     "last_seen": "2025-05-22 15:53:28",
-    "rank": 614
+    "rank": 615
   },
   "0x36fdEbeb2bb7538D5559F1D2968307E86EB04444": {
     "name": "CyberWishing",
@@ -6791,7 +6802,7 @@
     "first_seen": "2025-05-22 14:29:46",
     "count": 10,
     "last_seen": "2025-05-22 16:00:17",
-    "rank": 615
+    "rank": 616
   },
   "0x588F3B791571C71D3eDad7c298a53775a1099999": {
     "name": "DREAMX",
@@ -6802,7 +6813,7 @@
     "first_seen": "2025-05-22 14:32:32",
     "count": 10,
     "last_seen": "2025-05-22 15:39:21",
-    "rank": 616
+    "rank": 617
   },
   "0x61Ed1C66239d29Cc93C8597c6167159e8F69a823": {
     "name": "Reference System for DeFi",
@@ -6813,7 +6824,7 @@
     "first_seen": "2025-05-22 14:36:24",
     "count": 10,
     "last_seen": "2025-05-22 14:59:58",
-    "rank": 617
+    "rank": 618
   },
   "0x3351BcA8b937c21df959225C36f82Fb156404444": {
     "name": "Ryan",
@@ -6824,7 +6835,7 @@
     "first_seen": "2025-05-22 14:48:49",
     "count": 10,
     "last_seen": "2025-05-22 16:17:24",
-    "rank": 618
+    "rank": 619
   },
   "0x581FA684D0Ec11ccb46B1d92F1F24C8A3F95C0CA": {
     "name": "mCake Token",
@@ -6835,7 +6846,7 @@
     "first_seen": "2025-05-22 14:58:20",
     "count": 10,
     "last_seen": "2025-05-22 16:44:22",
-    "rank": 619
+    "rank": 620
   },
   "0xF952Fc3ca7325Cc27D15885d37117676d25BfdA6": {
     "name": "Goose Golden Egg",
@@ -6846,7 +6857,7 @@
     "first_seen": "2025-05-22 14:59:28",
     "count": 10,
     "last_seen": "2025-05-22 15:02:32",
-    "rank": 620
+    "rank": 621
   },
   "0x8682BaCE40610Eefcf14b1Af9CCd92b77bf88471": {
     "name": "Subject 3",
@@ -6857,7 +6868,7 @@
     "first_seen": "2025-05-22 15:11:52",
     "count": 10,
     "last_seen": "2025-05-22 15:33:48",
-    "rank": 621
+    "rank": 622
   },
   "0x14b1166aB53A237c8cEaeE2BBc4BbCa200cb7da8": {
     "name": "SparkPoint",
@@ -6868,7 +6879,7 @@
     "first_seen": "2025-05-22 15:16:02",
     "count": 10,
     "last_seen": "2025-05-22 15:20:09",
-    "rank": 622
+    "rank": 623
   },
   "0x948d2a81086A075b3130BAc19e4c6DEe1D2E3fE8": {
     "name": "Helmet.insure Governance Token",
@@ -6879,7 +6890,7 @@
     "first_seen": "2025-05-22 15:17:09",
     "count": 10,
     "last_seen": "2025-05-22 16:37:11",
-    "rank": 623
+    "rank": 624
   },
   "0xb12b19E6fA65A4DDCA30b6E0CA8996Ca27bdFc2C": {
     "name": "SMARTMALL TOKEN",
@@ -6890,7 +6901,7 @@
     "first_seen": "2025-05-22 15:19:54",
     "count": 10,
     "last_seen": "2025-05-22 15:24:47",
-    "rank": 624
+    "rank": 625
   },
   "0x660689af09aB2628afBd781e541bB1DD3d316DD9": {
     "name": "Noah",
@@ -6901,7 +6912,7 @@
     "first_seen": "2025-05-22 15:28:00",
     "count": 10,
     "last_seen": "2025-05-22 15:47:49",
-    "rank": 625
+    "rank": 626
   },
   "0x2598c30330D5771AE9F983979209486aE26dE875": {
     "name": "Any Inu",
@@ -6912,7 +6923,7 @@
     "first_seen": "2025-05-22 15:29:13",
     "count": 10,
     "last_seen": "2025-05-22 16:20:40",
-    "rank": 626
+    "rank": 627
   },
   "0xe57EDc546Ee99f17a5d6e32C2457B4569ecD40f8": {
     "name": "Class Coin",
@@ -6923,7 +6934,7 @@
     "first_seen": "2025-05-22 15:42:26",
     "count": 10,
     "last_seen": "2025-05-22 16:18:06",
-    "rank": 627
+    "rank": 628
   },
   "0x44966F61aAD3B6FB187025b0419A6e153F084401": {
     "name": "XPIN Point",
@@ -6934,7 +6945,7 @@
     "first_seen": "2025-05-22 16:00:23",
     "count": 10,
     "last_seen": "2025-05-22 16:02:13",
-    "rank": 628
+    "rank": 629
   },
   "0x181dE8C57C4F25eBA9Fd27757BBd11Cc66a55d31": {
     "name": "BelugaToken",
@@ -6945,7 +6956,7 @@
     "first_seen": "2025-05-22 16:06:42",
     "count": 10,
     "last_seen": "2025-05-22 16:34:24",
-    "rank": 629
+    "rank": 630
   },
   "0x2383596EFa3A0fc13EfdCd776410deFf25017417": {
     "name": "Soul Quantum Void",
@@ -6956,7 +6967,7 @@
     "first_seen": "2025-05-22 16:24:35",
     "count": 10,
     "last_seen": "2025-05-22 16:24:35",
-    "rank": 630
+    "rank": 631
   },
   "0x0910320181889feFDE0BB1Ca63962b0A8882e413": {
     "name": "Camly Coin",
@@ -6967,7 +6978,7 @@
     "first_seen": "2025-05-22 16:38:14",
     "count": 10,
     "last_seen": "2025-05-22 16:38:14",
-    "rank": 631
+    "rank": 632
   },
   "0xF21768cCBC73Ea5B6fd3C687208a7c2def2d966e": {
     "name": "Reef.finance",
@@ -6978,7 +6989,7 @@
     "first_seen": "2025-05-22 16:05:17",
     "count": 10,
     "last_seen": "2025-05-24 13:14:51",
-    "rank": 632
+    "rank": 633
   },
   "0x1557E0cBEB70d8692F1d30f79E32079B2f888888": {
     "name": "IDN Encrypted Network",
@@ -6989,7 +7000,7 @@
     "first_seen": "2025-05-22 14:28:54",
     "count": 10,
     "last_seen": "2025-05-24 13:56:27",
-    "rank": 633
+    "rank": 634
   },
   "0xc28957E946AC244612BcB205C899844Cbbcb093D": {
     "name": "BOOKUSD",
@@ -7000,7 +7011,7 @@
     "first_seen": "2025-05-22 15:11:02",
     "count": 10,
     "last_seen": "2025-05-24 13:20:22",
-    "rank": 634
+    "rank": 635
   },
   "0x352Cb5E19b12FC216548a2677bD0fce83BaE434B": {
     "name": "BitTorrent",
@@ -7011,7 +7022,7 @@
     "first_seen": "2025-05-22 14:45:39",
     "count": 10,
     "last_seen": "2025-05-24 14:09:23",
-    "rank": 635
+    "rank": 636
   },
   "0xa4532275398d3001B5dDFef7E0e5D2281246bbC0": {
     "name": "MYAI",
@@ -7022,7 +7033,7 @@
     "first_seen": "2025-05-22 14:27:01",
     "count": 10,
     "last_seen": "2025-05-24 14:14:34",
-    "rank": 636
+    "rank": 637
   },
   "0x45F5561b299A0aB8CD9418B380667087f773C864": {
     "name": "OPA",
@@ -7033,7 +7044,7 @@
     "first_seen": "2025-05-22 14:45:21",
     "count": 10,
     "last_seen": "2025-05-24 13:39:44",
-    "rank": 637
+    "rank": 638
   },
   "0xD963b2236D227a0302E19F2f9595F424950dc186": {
     "name": "CZBlue",
@@ -7044,7 +7055,7 @@
     "first_seen": "2025-05-22 14:59:16",
     "count": 10,
     "last_seen": "2025-05-24 14:57:28",
-    "rank": 638
+    "rank": 639
   },
   "0xfa3baB5aCcbBeB550A710F35bEEeC12898ACcC1c": {
     "name": "Staked Olympus Pact",
@@ -7055,17 +7066,6 @@
     "first_seen": "2025-05-22 15:04:21",
     "count": 10,
     "last_seen": "2025-05-24 13:41:27",
-    "rank": 639
-  },
-  "0x4eA98c1999575aaadfb38237Dd015c5E773F75a2": {
-    "name": "MAGA",
-    "symbol": "TRUMP",
-    "decimals": 9,
-    "total_supply": "1353863991546400",
-    "address": "0x4eA98c1999575aaadfb38237Dd015c5E773F75a2",
-    "first_seen": "2025-05-22 15:13:26",
-    "count": 10,
-    "last_seen": "2025-05-24 15:02:03",
     "rank": 640
   },
   "0x408ea55eE4Bf91B8d21A0f6a757B90eDf287CF36": {
@@ -12374,6 +12374,18 @@
     "rank": 1117,
     "is_lp": false
   },
+  "0xafC52eb6f9b2C68D1e06e0B822F6CB9244D14B50": {
+    "name": "IndoCrypt Token",
+    "symbol": "ICT",
+    "decimals": 18,
+    "total_supply": "50000000000000000000000000",
+    "address": "0xafC52eb6f9b2C68D1e06e0B822F6CB9244D14B50",
+    "first_seen": "2025-05-24 13:30:48",
+    "count": 4,
+    "last_seen": "2025-05-24 15:03:52",
+    "rank": 1118,
+    "is_lp": false
+  },
   "0x9dAA2878A8739E66e08e7ad35316C5143c0ea7C7": {
     "name": "Pendle Market",
     "symbol": "PENDLE-LPT",
@@ -12383,7 +12395,7 @@
     "first_seen": "2025-05-24 13:35:07",
     "count": 4,
     "last_seen": "2025-05-24 14:19:38",
-    "rank": 1118,
+    "rank": 1119,
     "is_lp": true
   },
   "0xeD18401b74d3281bEf49A05AcBbb82EeEF7611aD": {
@@ -12395,7 +12407,7 @@
     "first_seen": "2025-05-24 13:36:09",
     "count": 4,
     "last_seen": "2025-05-24 14:45:59",
-    "rank": 1119,
+    "rank": 1120,
     "is_lp": false
   },
   "0xd4a45211D607b0239060E952C300918Ec509f129": {
@@ -12407,7 +12419,7 @@
     "first_seen": "2025-05-24 13:39:37",
     "count": 4,
     "last_seen": "2025-05-24 15:00:40",
-    "rank": 1120,
+    "rank": 1121,
     "is_lp": false
   },
   "0x6Df30e0584318DDEa5418667000bc0FcA1A1e153": {
@@ -12419,7 +12431,7 @@
     "first_seen": "2025-05-24 13:39:42",
     "count": 4,
     "last_seen": "2025-05-24 14:26:42",
-    "rank": 1121,
+    "rank": 1122,
     "is_lp": false
   },
   "0x1aA5Bd126b42fdabd99466FCbe29c43DaC6b4444": {
@@ -12431,7 +12443,7 @@
     "first_seen": "2025-05-24 13:40:18",
     "count": 4,
     "last_seen": "2025-05-24 14:41:07",
-    "rank": 1122,
+    "rank": 1123,
     "is_lp": false
   },
   "0xaF09625236ff419A5169b580E5B1bA72B3431d32": {
@@ -12443,7 +12455,7 @@
     "first_seen": "2025-05-24 13:40:39",
     "count": 4,
     "last_seen": "2025-05-24 13:41:21",
-    "rank": 1123,
+    "rank": 1124,
     "is_lp": false
   },
   "0xC1F0768587Dc889e494C171B155C60B4e9a13F08": {
@@ -12455,7 +12467,7 @@
     "first_seen": "2025-05-24 13:41:11",
     "count": 4,
     "last_seen": "2025-05-24 14:56:48",
-    "rank": 1124,
+    "rank": 1125,
     "is_lp": false
   },
   "0x606Bb7e9B80bA73D1303f1c3625Cf7F09249D680": {
@@ -12467,7 +12479,7 @@
     "first_seen": "2025-05-24 13:43:24",
     "count": 4,
     "last_seen": "2025-05-24 13:43:24",
-    "rank": 1125,
+    "rank": 1126,
     "is_lp": false
   },
   "0xf87196d2D4B146fE4832538A501eb9F89F91Fdde": {
@@ -12479,7 +12491,7 @@
     "first_seen": "2025-05-24 13:49:32",
     "count": 4,
     "last_seen": "2025-05-24 14:42:59",
-    "rank": 1126,
+    "rank": 1127,
     "is_lp": false
   },
   "0xc14cDBEB81be06FfaF357F9156415eaa2542e30F": {
@@ -12491,7 +12503,7 @@
     "first_seen": "2025-05-24 13:51:47",
     "count": 4,
     "last_seen": "2025-05-24 14:43:57",
-    "rank": 1127,
+    "rank": 1128,
     "is_lp": false
   },
   "0xBdEAe1cA48894A1759A8374D63925f21f2Ee2639": {
@@ -12503,7 +12515,7 @@
     "first_seen": "2025-05-24 13:52:47",
     "count": 4,
     "last_seen": "2025-05-24 15:02:32",
-    "rank": 1128,
+    "rank": 1129,
     "is_lp": false
   },
   "0x251fa4BE6738cef5D4510412a1712FC1F7d965b4": {
@@ -12515,7 +12527,7 @@
     "first_seen": "2025-05-24 13:59:14",
     "count": 4,
     "last_seen": "2025-05-24 13:59:14",
-    "rank": 1129,
+    "rank": 1130,
     "is_lp": true
   },
   "0x6d106C0B8d2f47c5465bdBD58D1Be253762cBBC1": {
@@ -12527,7 +12539,7 @@
     "first_seen": "2025-05-24 14:04:55",
     "count": 4,
     "last_seen": "2025-05-24 14:22:21",
-    "rank": 1130,
+    "rank": 1131,
     "is_lp": false
   },
   "0x5c88Ad996Ac76397446ad2328066eF7Eb386F7cf": {
@@ -12539,7 +12551,7 @@
     "first_seen": "2025-05-24 14:05:30",
     "count": 4,
     "last_seen": "2025-05-24 14:36:07",
-    "rank": 1131,
+    "rank": 1132,
     "is_lp": false
   },
   "0xd41E67d5fC15E85832c5a20A3A402985Fb42B666": {
@@ -12551,7 +12563,7 @@
     "first_seen": "2025-05-24 14:23:27",
     "count": 4,
     "last_seen": "2025-05-24 14:23:27",
-    "rank": 1132,
+    "rank": 1133,
     "is_lp": false
   },
   "0x86333e34c8804532Ae34207c46e741cBc3Ff3FE3": {
@@ -12563,7 +12575,7 @@
     "first_seen": "2025-05-24 14:24:52",
     "count": 4,
     "last_seen": "2025-05-24 14:24:52",
-    "rank": 1133,
+    "rank": 1134,
     "is_lp": false
   },
   "0xA5F249F401bA8931899a364d8E2699b5FA1D87a9": {
@@ -12575,7 +12587,7 @@
     "first_seen": "2025-05-24 14:29:59",
     "count": 4,
     "last_seen": "2025-05-24 14:29:59",
-    "rank": 1134,
+    "rank": 1135,
     "is_lp": false
   },
   "0x5aac70262AB6621F1Fb2695E248488AFA3C5A872": {
@@ -12587,7 +12599,7 @@
     "first_seen": "2025-05-24 14:33:44",
     "count": 4,
     "last_seen": "2025-05-24 14:50:25",
-    "rank": 1135,
+    "rank": 1136,
     "is_lp": false
   },
   "0x32E9052De6143CF6C6109c4C85dEF9f0D9b90620": {
@@ -12599,7 +12611,7 @@
     "first_seen": "2025-05-24 14:45:29",
     "count": 4,
     "last_seen": "2025-05-24 15:03:40",
-    "rank": 1136,
+    "rank": 1137,
     "is_lp": false
   },
   "0x01CA78a2B5F1a9152D8A3A625bd7dF5765eeE1D8": {
@@ -12611,7 +12623,7 @@
     "first_seen": "2025-05-22 14:18:47",
     "count": 3,
     "last_seen": "2025-05-22 16:14:52",
-    "rank": 1137
+    "rank": 1138
   },
   "0x6386Adc4BC9c21984E34fD916BB349dD861742af": {
     "name": "DeBoxToken",
@@ -12622,7 +12634,7 @@
     "first_seen": "2025-05-22 14:19:09",
     "count": 3,
     "last_seen": "2025-05-22 14:19:09",
-    "rank": 1138
+    "rank": 1139
   },
   "0xd0b7b39c542D781A7edB7786e69b23a83cb14444": {
     "name": "Soon",
@@ -12633,7 +12645,7 @@
     "first_seen": "2025-05-22 14:21:17",
     "count": 3,
     "last_seen": "2025-05-22 14:27:56",
-    "rank": 1139
+    "rank": 1140
   },
   "0x10bf6e7B28b1cfFb1c047D7F815953931e5Ee947": {
     "name": "aETH-WBNB",
@@ -12644,7 +12656,7 @@
     "first_seen": "2025-05-22 14:22:25",
     "count": 3,
     "last_seen": "2025-05-22 15:15:10",
-    "rank": 1140
+    "rank": 1141
   },
   "0xFBe126cE7d9526c378c2CECF0797E69C038C4444": {
     "name": "AIVertex",
@@ -12655,7 +12667,7 @@
     "first_seen": "2025-05-22 14:22:47",
     "count": 3,
     "last_seen": "2025-05-22 14:26:43",
-    "rank": 1141
+    "rank": 1142
   },
   "0x6C46422A0f7dbbAD9BEC3BbBC1189bfAf9794B05": {
     "name": "Little Rabbit",
@@ -12666,7 +12678,7 @@
     "first_seen": "2025-05-22 14:23:27",
     "count": 3,
     "last_seen": "2025-05-22 14:23:27",
-    "rank": 1142
+    "rank": 1143
   },
   "0xe91E249704C6edF44B2C9413CA68Aff5dD17F152": {
     "name": "GESARA",
@@ -12677,7 +12689,7 @@
     "first_seen": "2025-05-22 14:24:21",
     "count": 3,
     "last_seen": "2025-05-22 16:05:10",
-    "rank": 1143
+    "rank": 1144
   },
   "0xecC9A1d97FF88f5a786C521Bf4a14A2D3F6c50f7": {
     "name": "Binance Hat",
@@ -12688,7 +12700,7 @@
     "first_seen": "2025-05-22 14:25:10",
     "count": 3,
     "last_seen": "2025-05-22 14:25:10",
-    "rank": 1144
+    "rank": 1145
   },
   "0x563BFE3E2DA0E9A5E9C57a0043888e744f7a04D6": {
     "name": "MAB3",
@@ -12699,7 +12711,7 @@
     "first_seen": "2025-05-22 14:26:03",
     "count": 3,
     "last_seen": "2025-05-22 14:35:13",
-    "rank": 1145
+    "rank": 1146
   },
   "0x50eB033c51175D3EC8B338d8210De75D25e10Fe7": {
     "name": "Truth Social Memecoin",
@@ -12710,7 +12722,7 @@
     "first_seen": "2025-05-22 14:28:30",
     "count": 3,
     "last_seen": "2025-05-22 16:48:45",
-    "rank": 1146
+    "rank": 1147
   },
   "0xca3b52B944b49ec351AdC151DfC1d5dA118F3fD1": {
     "name": "ANEX",
@@ -12721,7 +12733,7 @@
     "first_seen": "2025-05-22 14:29:02",
     "count": 3,
     "last_seen": "2025-05-22 15:55:00",
-    "rank": 1147
+    "rank": 1148
   },
   "0xBa7d871B6705d75580aB383dBEf577DB61020159": {
     "name": "A48Z",
@@ -12732,7 +12744,7 @@
     "first_seen": "2025-05-22 14:32:43",
     "count": 3,
     "last_seen": "2025-05-22 15:20:33",
-    "rank": 1148
+    "rank": 1149
   },
   "0xa75db3C0394C70a67c1CF573Ef9335d708D1B597": {
     "name": "MVUMemes",
@@ -12743,7 +12755,7 @@
     "first_seen": "2025-05-22 14:33:17",
     "count": 3,
     "last_seen": "2025-05-22 15:09:46",
-    "rank": 1149
+    "rank": 1150
   },
   "0x3fc0d86eAA18eA9e737dCA5878f1e9000e65a624": {
     "name": "LIFI",
@@ -12754,7 +12766,7 @@
     "first_seen": "2025-05-22 14:35:01",
     "count": 3,
     "last_seen": "2025-05-22 14:35:01",
-    "rank": 1150
+    "rank": 1151
   },
   "0x37184F77d46249cd1e330CE1Dc23f0Ea2F8E81f2": {
     "name": "ZERO One",
@@ -12765,7 +12777,7 @@
     "first_seen": "2025-05-22 14:35:18",
     "count": 3,
     "last_seen": "2025-05-22 14:35:18",
-    "rank": 1151
+    "rank": 1152
   },
   "0xd013ca6b1F361a951f0c7125E65f5621C3DD8802": {
     "name": "SNOR",
@@ -12776,7 +12788,7 @@
     "first_seen": "2025-05-22 14:38:57",
     "count": 3,
     "last_seen": "2025-05-22 14:38:57",
-    "rank": 1152
+    "rank": 1153
   },
   "0x58242633b492DfAe3Afeacc1c15C6AED4890Facf": {
     "name": "LIBERTY PAY COIN",
@@ -12787,7 +12799,7 @@
     "first_seen": "2025-05-22 14:40:54",
     "count": 3,
     "last_seen": "2025-05-22 15:33:50",
-    "rank": 1153
+    "rank": 1154
   },
   "0x92eD61FB8955Cc4e392781cB8b7cD04AADc43D0c": {
     "name": "Oggy Inu",
@@ -12798,7 +12810,7 @@
     "first_seen": "2025-05-22 14:43:04",
     "count": 3,
     "last_seen": "2025-05-22 14:43:04",
-    "rank": 1154
+    "rank": 1155
   },
   "0x91E758bCfcFE1cf3d476cB9F1483a731Db5e2bf2": {
     "name": "Grand Journey",
@@ -12809,7 +12821,7 @@
     "first_seen": "2025-05-22 14:43:06",
     "count": 3,
     "last_seen": "2025-05-22 16:21:07",
-    "rank": 1155
+    "rank": 1156
   },
   "0xd37534511f98A25b7aF6095693dC0737d10D6A77": {
     "name": "Dividen_Tracker",
@@ -12820,7 +12832,7 @@
     "first_seen": "2025-05-22 14:44:16",
     "count": 3,
     "last_seen": "2025-05-22 16:52:57",
-    "rank": 1156
+    "rank": 1157
   },
   "0xa28dB960e32833f582bA5F6338880bf239f2a966": {
     "name": "SG",
@@ -12831,7 +12843,7 @@
     "first_seen": "2025-05-22 14:44:17",
     "count": 3,
     "last_seen": "2025-05-22 15:34:55",
-    "rank": 1157
+    "rank": 1158
   },
   "0x41027ad56181Fe6914a14003edfD7148E40b3E3a": {
     "name": "EXCHANGE COIN",
@@ -12842,7 +12854,7 @@
     "first_seen": "2025-05-22 14:44:29",
     "count": 3,
     "last_seen": "2025-05-22 16:18:55",
-    "rank": 1158
+    "rank": 1159
   },
   "0x1c864C55F0c5E0014e2740c36a1F2378BFabD487": {
     "name": "𝕏AI",
@@ -12853,7 +12865,7 @@
     "first_seen": "2025-05-22 14:44:31",
     "count": 3,
     "last_seen": "2025-05-22 14:44:31",
-    "rank": 1159
+    "rank": 1160
   },
   "0x9107Bbd6B7aE186C6A6aead69A7bAC18ab2E84a9": {
     "name": "TradeLedger Vietnam",
@@ -12864,7 +12876,7 @@
     "first_seen": "2025-05-22 14:45:29",
     "count": 3,
     "last_seen": "2025-05-22 14:45:29",
-    "rank": 1160
+    "rank": 1161
   },
   "0xe99C5d34cf45D66F70322f17C57433aD67d6d6Ec": {
     "name": "ChainRaizer Badge",
@@ -12875,7 +12887,7 @@
     "first_seen": "2025-05-22 14:45:54",
     "count": 3,
     "last_seen": "2025-05-22 15:45:48",
-    "rank": 1161
+    "rank": 1162
   },
   "0xda2B14D51cc49149023781E6f6B1BF3AF0884444": {
     "name": "pizza rabbit",
@@ -12886,7 +12898,7 @@
     "first_seen": "2025-05-22 14:47:15",
     "count": 3,
     "last_seen": "2025-05-22 16:17:21",
-    "rank": 1162
+    "rank": 1163
   },
   "0x90c563F4a99fADE5B1C3a79600eFE263a79b4444": {
     "name": "DepinAI",
@@ -12897,7 +12909,7 @@
     "first_seen": "2025-05-22 14:47:49",
     "count": 3,
     "last_seen": "2025-05-22 16:40:14",
-    "rank": 1163
+    "rank": 1164
   },
   "0xcc201Ea56965D7c107C02CE0C2C4CF9A022D1119": {
     "name": "3AT USD Token",
@@ -12908,7 +12920,7 @@
     "first_seen": "2025-05-22 14:48:58",
     "count": 3,
     "last_seen": "2025-05-22 14:49:14",
-    "rank": 1164
+    "rank": 1165
   },
   "0x0E76414d433ddfe8004d2A7505d218874875a996": {
     "name": "Aave BNB Smart Chain Variable Debt WBNB",
@@ -12919,7 +12931,7 @@
     "first_seen": "2025-05-22 14:49:20",
     "count": 3,
     "last_seen": "2025-05-22 15:31:14",
-    "rank": 1165
+    "rank": 1166
   },
   "0x9BC28266F7392893241C36D6f69af5F875184444": {
     "name": "ZOO",
@@ -12930,7 +12942,7 @@
     "first_seen": "2025-05-22 14:51:28",
     "count": 3,
     "last_seen": "2025-05-22 14:53:35",
-    "rank": 1166
+    "rank": 1167
   },
   "0x4b042CB11156F4F0f7ba056Cda099dDb7bf21061": {
     "name": "Pancake LPs",
@@ -12941,7 +12953,7 @@
     "first_seen": "2025-05-22 14:51:48",
     "count": 3,
     "last_seen": "2025-05-22 15:39:21",
-    "rank": 1167
+    "rank": 1168
   },
   "0xb68a20b9e9B06fDE873897e12Ab3372ce48F1A8A": {
     "name": "Playdoge",
@@ -12952,7 +12964,7 @@
     "first_seen": "2025-05-22 14:52:15",
     "count": 3,
     "last_seen": "2025-05-22 15:04:24",
-    "rank": 1168
+    "rank": 1169
   },
   "0xbaB0CFe0ceae67D6dAe64d3CBdB34A5F25EAe13F": {
     "name": "Soft Mining AI",
@@ -12963,7 +12975,7 @@
     "first_seen": "2025-05-22 14:53:53",
     "count": 3,
     "last_seen": "2025-05-22 16:39:38",
-    "rank": 1169
+    "rank": 1170
   },
   "0xf88ca2579166D6788726A52f14da0637d572D139": {
     "name": "UNIVERSAL COIN",
@@ -12974,7 +12986,7 @@
     "first_seen": "2025-05-22 14:54:16",
     "count": 3,
     "last_seen": "2025-05-22 16:22:02",
-    "rank": 1170
+    "rank": 1171
   },
   "0x0427dF380aECdB4657b1334aB608DA16b7526Ab2": {
     "name": "Quoll THENA",
@@ -12985,7 +12997,7 @@
     "first_seen": "2025-05-22 14:55:54",
     "count": 3,
     "last_seen": "2025-05-22 14:55:55",
-    "rank": 1171
+    "rank": 1172
   },
   "0xE561479bEbEE0e606c19bB1973Fc4761613e3C42": {
     "name": "Meowth Token",
@@ -12996,7 +13008,7 @@
     "first_seen": "2025-05-22 14:56:42",
     "count": 3,
     "last_seen": "2025-05-22 16:06:09",
-    "rank": 1172
+    "rank": 1173
   },
   "0xD0c88359a4380B18883F3D9C97B42B407686537A": {
     "name": "GreenToken",
@@ -13007,7 +13019,7 @@
     "first_seen": "2025-05-22 14:57:26",
     "count": 3,
     "last_seen": "2025-05-22 15:00:50",
-    "rank": 1173
+    "rank": 1174
   },
   "0x13BEC0d913E1D33397c44620A8Ce0BB3149294e2": {
     "name": "PIKACHU INU",
@@ -13018,7 +13030,7 @@
     "first_seen": "2025-05-22 14:57:33",
     "count": 3,
     "last_seen": "2025-05-22 14:57:33",
-    "rank": 1174
+    "rank": 1175
   },
   "0xaeF0d72a118ce24feE3cD1d43d383897D05B4e99": {
     "name": "WINk",
@@ -13029,7 +13041,7 @@
     "first_seen": "2025-05-22 14:59:26",
     "count": 3,
     "last_seen": "2025-05-22 15:02:36",
-    "rank": 1175
+    "rank": 1176
   },
   "0x689cC7BB716AfF448DcA16a8b61253C7E246D9Fc": {
     "name": "The Man Token",
@@ -13040,7 +13052,7 @@
     "first_seen": "2025-05-22 14:59:33",
     "count": 3,
     "last_seen": "2025-05-22 14:59:33",
-    "rank": 1176
+    "rank": 1177
   },
   "0xd178Fd071E03575Da73e28fe55307F544b7FAbbe": {
     "name": "MetaSeal Protocol",
@@ -13051,7 +13063,7 @@
     "first_seen": "2025-05-22 15:00:19",
     "count": 3,
     "last_seen": "2025-05-22 15:09:38",
-    "rank": 1177
+    "rank": 1178
   },
   "0x3FdA9383A84C05eC8f7630Fe10AdF1fAC13241CC": {
     "name": "dego.finance",
@@ -13062,7 +13074,7 @@
     "first_seen": "2025-05-22 15:01:09",
     "count": 3,
     "last_seen": "2025-05-22 15:01:09",
-    "rank": 1178
+    "rank": 1179
   },
   "0x9D6dB6382444b70a51307A4291188f60D4EEF205": {
     "name": "Baby Pepe",
@@ -13073,7 +13085,7 @@
     "first_seen": "2025-05-22 15:01:20",
     "count": 3,
     "last_seen": "2025-05-22 15:01:20",
-    "rank": 1179
+    "rank": 1180
   },
   "0xA2086F4a3955A520A1743D68CDbcf064Ee1746Cd": {
     "name": "X Doge",
@@ -13084,7 +13096,7 @@
     "first_seen": "2025-05-22 15:01:52",
     "count": 3,
     "last_seen": "2025-05-22 15:16:00",
-    "rank": 1180
+    "rank": 1181
   },
   "0xDCc2FC2D41D03F0c83644d2D90BB93b84411b163": {
     "name": "Pancake LPs",
@@ -13095,7 +13107,7 @@
     "first_seen": "2025-05-22 15:02:42",
     "count": 3,
     "last_seen": "2025-05-22 15:13:16",
-    "rank": 1181
+    "rank": 1182
   },
   "0xb86AbCb37C3A4B64f74f59301AFF131a1BEcC787": {
     "name": "Zilliqa",
@@ -13106,7 +13118,7 @@
     "first_seen": "2025-05-22 15:03:07",
     "count": 3,
     "last_seen": "2025-05-22 16:00:54",
-    "rank": 1182
+    "rank": 1183
   },
   "0x386877A09C2bb2F7f414aBF5179b95330Db4F096": {
     "name": "XBOSS",
@@ -13117,7 +13129,7 @@
     "first_seen": "2025-05-22 15:04:33",
     "count": 3,
     "last_seen": "2025-05-22 15:30:24",
-    "rank": 1183
+    "rank": 1184
   },
   "0xA8c2B8eec3d368C0253ad3dae65a5F2BBB89c929": {
     "name": "CertiK Token",
@@ -13128,7 +13140,7 @@
     "first_seen": "2025-05-22 15:06:38",
     "count": 3,
     "last_seen": "2025-05-22 16:13:33",
-    "rank": 1184
+    "rank": 1185
   },
   "0xbB8203e945866A1f3Eced6e5B22679E5A540be91": {
     "name": "Squid-Token.io",
@@ -13139,7 +13151,7 @@
     "first_seen": "2025-05-22 15:09:24",
     "count": 3,
     "last_seen": "2025-05-22 15:32:55",
-    "rank": 1185
+    "rank": 1186
   },
   "0x57185189118C7E786cAfd5C71f35b16012Fa95aD": {
     "name": "BEFE",
@@ -13150,7 +13162,7 @@
     "first_seen": "2025-05-22 15:09:55",
     "count": 3,
     "last_seen": "2025-05-22 15:51:51",
-    "rank": 1186
+    "rank": 1187
   },
   "0xC7d8D35EBA58a0935ff2D5a33Df105DD9f071731": {
     "name": "Hedget",
@@ -13161,7 +13173,7 @@
     "first_seen": "2025-05-22 15:15:29",
     "count": 3,
     "last_seen": "2025-05-22 15:16:54",
-    "rank": 1187
+    "rank": 1188
   },
   "0x5C96fd7017B2eD80f4A8F88Cef9a9B6F96a7fEd3": {
     "name": "Rolling Coin",
@@ -13172,7 +13184,7 @@
     "first_seen": "2025-05-22 15:16:35",
     "count": 3,
     "last_seen": "2025-05-22 15:46:14",
-    "rank": 1188
+    "rank": 1189
   },
   "0x14233bA7106D1a3C2db6F9d6f5B216956a201072": {
     "name": "Wrapped Ether",
@@ -13183,7 +13195,7 @@
     "first_seen": "2025-05-22 15:16:50",
     "count": 3,
     "last_seen": "2025-05-22 16:40:34",
-    "rank": 1189
+    "rank": 1190
   },
   "0x8766aBE2C911315d4130f2F18E9aD101605E7742": {
     "name": "BIB Token",
@@ -13194,7 +13206,7 @@
     "first_seen": "2025-05-22 15:16:51",
     "count": 3,
     "last_seen": "2025-05-22 16:22:21",
-    "rank": 1190
+    "rank": 1191
   },
   "0x69f6b83dbCd4046531b68Ad138cE602cf7470fb8": {
     "name": "Yolo",
@@ -13205,7 +13217,7 @@
     "first_seen": "2025-05-22 15:18:48",
     "count": 3,
     "last_seen": "2025-05-22 15:18:48",
-    "rank": 1191
+    "rank": 1192
   },
   "0xDA894B627A1fE9455Ac46aFe9F469C443C9ecBaa": {
     "name": "CTCC",
@@ -13216,7 +13228,7 @@
     "first_seen": "2025-05-22 15:20:01",
     "count": 3,
     "last_seen": "2025-05-22 15:20:01",
-    "rank": 1192
+    "rank": 1193
   },
   "0x7EA42e53033B9c4BF975c1afcF17FF7EF25b04a4": {
     "name": "DYNACHAIN",
@@ -13227,7 +13239,7 @@
     "first_seen": "2025-05-22 15:21:31",
     "count": 3,
     "last_seen": "2025-05-22 15:52:18",
-    "rank": 1193
+    "rank": 1194
   },
   "0x4bf702A6d42481E39C01F927406D8B070e205Cb2": {
     "name": "TWEET 2GO MOON",
@@ -13238,7 +13250,7 @@
     "first_seen": "2025-05-22 15:25:55",
     "count": 3,
     "last_seen": "2025-05-22 15:34:26",
-    "rank": 1194
+    "rank": 1195
   },
   "0x0F55F9c1Bf2274555A09c7a8a0e73E8C1a331B29": {
     "name": "FKTRUST",
@@ -13249,7 +13261,7 @@
     "first_seen": "2025-05-22 15:26:02",
     "count": 3,
     "last_seen": "2025-05-22 16:48:56",
-    "rank": 1195
+    "rank": 1196
   },
   "0xD8047AFECB86e44eFf3aDd991B9F063eD4ca716B": {
     "name": "Good Games Guild",
@@ -13260,7 +13272,7 @@
     "first_seen": "2025-05-22 15:29:39",
     "count": 3,
     "last_seen": "2025-05-22 15:29:39",
-    "rank": 1196
+    "rank": 1197
   },
   "0xECAF1690cAe0356d3105D44A7942c41932b44444": {
     "name": "doge embed pepe",
@@ -13271,7 +13283,7 @@
     "first_seen": "2025-05-22 15:30:56",
     "count": 3,
     "last_seen": "2025-05-22 15:41:51",
-    "rank": 1197
+    "rank": 1198
   },
   "0xf6e9087C7694aeD5a998ad29052B817881728222": {
     "name": "VSDT",
@@ -13282,7 +13294,7 @@
     "first_seen": "2025-05-22 15:31:10",
     "count": 3,
     "last_seen": "2025-05-22 15:31:10",
-    "rank": 1198
+    "rank": 1199
   },
   "0xa92B5076B1D4fF894B0833F1A4052dB7631f4444": {
     "name": "Parrot",
@@ -13293,7 +13305,7 @@
     "first_seen": "2025-05-22 15:31:33",
     "count": 3,
     "last_seen": "2025-05-22 16:44:55",
-    "rank": 1199
+    "rank": 1200
   },
   "0x64E4fea6e4F3637025c7Bcd878E2B238B01f7D4e": {
     "name": "insurance",
@@ -13304,7 +13316,7 @@
     "first_seen": "2025-05-22 15:31:44",
     "count": 3,
     "last_seen": "2025-05-22 16:05:47",
-    "rank": 1200
+    "rank": 1201
   },
   "0xd293873ebFEcC344b21422576a2bBF21d5928372": {
     "name": "IST",
@@ -13315,7 +13327,7 @@
     "first_seen": "2025-05-22 15:31:57",
     "count": 3,
     "last_seen": "2025-05-22 16:12:39",
-    "rank": 1201
+    "rank": 1202
   },
   "0x8475bdA66ea4feA1f74C57136041ba9325DB5100": {
     "name": "Data Mall Coin",
@@ -13326,7 +13338,7 @@
     "first_seen": "2025-05-22 15:38:35",
     "count": 3,
     "last_seen": "2025-05-22 16:03:35",
-    "rank": 1202
+    "rank": 1203
   },
   "0xA11f600d897f619e79a5b8d1f1ed8126bfeeE71b": {
     "name": "Pancake LPs",
@@ -13337,7 +13349,7 @@
     "first_seen": "2025-05-22 15:39:08",
     "count": 3,
     "last_seen": "2025-05-22 15:52:03",
-    "rank": 1203
+    "rank": 1204
   },
   "0x88c3dADE3eE238F9Bb108f79EB094582Da614444": {
     "name": "BBABYTOKEN",
@@ -13348,7 +13360,7 @@
     "first_seen": "2025-05-22 15:39:18",
     "count": 3,
     "last_seen": "2025-05-22 16:21:06",
-    "rank": 1204
+    "rank": 1205
   },
   "0xB96D0f29a0aC9AF4a32835e90EC6531389765089": {
     "name": "Vapor Token",
@@ -13359,7 +13371,7 @@
     "first_seen": "2025-05-22 15:41:50",
     "count": 3,
     "last_seen": "2025-05-22 16:40:35",
-    "rank": 1205
+    "rank": 1206
   },
   "0x047848219A5963398B375168D053DF46B3bb7D68": {
     "name": "Pancake LPs",
@@ -13370,7 +13382,7 @@
     "first_seen": "2025-05-22 15:42:04",
     "count": 3,
     "last_seen": "2025-05-22 15:42:04",
-    "rank": 1206
+    "rank": 1207
   },
   "0x146171eB1c1E32faEfCFdABC3c470b83197AdB60": {
     "name": "ITC",
@@ -13381,7 +13393,7 @@
     "first_seen": "2025-05-22 15:44:36",
     "count": 3,
     "last_seen": "2025-05-22 15:44:36",
-    "rank": 1207
+    "rank": 1208
   },
   "0xBaB0E0ce929D73a258a1C4e1840319F190685C9d": {
     "name": "YU7",
@@ -13392,7 +13404,7 @@
     "first_seen": "2025-05-22 15:44:37",
     "count": 3,
     "last_seen": "2025-05-22 16:20:46",
-    "rank": 1208
+    "rank": 1209
   },
   "0x1f5F1C9011be4aA0603E224a9B6b33C4397D733c": {
     "name": "Pancake LPs",
@@ -13403,7 +13415,7 @@
     "first_seen": "2025-05-22 15:47:57",
     "count": 3,
     "last_seen": "2025-05-22 15:51:57",
-    "rank": 1209
+    "rank": 1210
   },
   "0x0FA491c20F827482F38046afB4e29882bC96d130": {
     "name": "Pancake LPs",
@@ -13414,7 +13426,7 @@
     "first_seen": "2025-05-22 15:54:42",
     "count": 3,
     "last_seen": "2025-05-22 16:16:34",
-    "rank": 1210
+    "rank": 1211
   },
   "0x67AA700Ab0110Cc52bf7F308fe25068E87a0f581": {
     "name": "Pundi AI",
@@ -13425,7 +13437,7 @@
     "first_seen": "2025-05-22 15:58:36",
     "count": 3,
     "last_seen": "2025-05-22 16:36:34",
-    "rank": 1211
+    "rank": 1212
   },
   "0xF3c7CECF8cBC3066F9a87b310cEBE198d00479aC": {
     "name": "FEG Token",
@@ -13436,7 +13448,7 @@
     "first_seen": "2025-05-22 15:58:43",
     "count": 3,
     "last_seen": "2025-05-22 15:58:43",
-    "rank": 1212
+    "rank": 1213
   },
   "0x4DD65BC56F3666CA84b935ce4BA3cef6bA95aDF0": {
     "name": "Pancake LPs",
@@ -13447,7 +13459,7 @@
     "first_seen": "2025-05-22 16:01:12",
     "count": 3,
     "last_seen": "2025-05-22 16:23:52",
-    "rank": 1213
+    "rank": 1214
   },
   "0xd7EfDeE04e508502BDc666F67F3D9b006C20318D": {
     "name": "Pancake LPs",
@@ -13458,7 +13470,7 @@
     "first_seen": "2025-05-22 16:03:15",
     "count": 3,
     "last_seen": "2025-05-22 16:03:15",
-    "rank": 1214
+    "rank": 1215
   },
   "0xBC33B4D48f76d17A1800aFcB730e8a6AAada7Fe5": {
     "name": "Bifrost Voucher DOT",
@@ -13469,7 +13481,7 @@
     "first_seen": "2025-05-22 16:03:46",
     "count": 3,
     "last_seen": "2025-05-22 16:03:46",
-    "rank": 1215
+    "rank": 1216
   },
   "0x8729123aC749359144DB4396F8ecF32976f7A86e": {
     "name": "PhoenixCo Token",
@@ -13480,7 +13492,7 @@
     "first_seen": "2025-05-22 16:03:56",
     "count": 3,
     "last_seen": "2025-05-22 16:03:56",
-    "rank": 1216
+    "rank": 1217
   },
   "0xA80a006A48dc7203EB3AA7E0b3816918d242CFC4": {
     "name": "Lira",
@@ -13491,7 +13503,7 @@
     "first_seen": "2025-05-22 16:04:22",
     "count": 3,
     "last_seen": "2025-05-22 16:07:08",
-    "rank": 1217
+    "rank": 1218
   },
   "0x1f01F244634D7a01d32742Ba6017d23Db4dba6D7": {
     "name": "SPC",
@@ -13502,7 +13514,7 @@
     "first_seen": "2025-05-22 16:06:08",
     "count": 3,
     "last_seen": "2025-05-22 16:07:06",
-    "rank": 1218
+    "rank": 1219
   },
   "0x49Ba0C6Be749cC5e1E85b107952EceE6e5084444": {
     "name": "FISH THE BINANCE",
@@ -13513,7 +13525,7 @@
     "first_seen": "2025-05-22 16:06:51",
     "count": 3,
     "last_seen": "2025-05-22 16:45:41",
-    "rank": 1219
+    "rank": 1220
   },
   "0x300f14d3Eff377d024BcD3fF07636b683ac48E8F": {
     "name": "BIG",
@@ -13524,7 +13536,7 @@
     "first_seen": "2025-05-22 16:11:50",
     "count": 3,
     "last_seen": "2025-05-22 16:11:50",
-    "rank": 1220
+    "rank": 1221
   },
   "0x5D3c9406feFB2D75f21a24118fa3Cf549c59557F": {
     "name": "Tranchess Stable Yield Bedrock uniBTC 2",
@@ -13535,7 +13547,7 @@
     "first_seen": "2025-05-22 16:12:01",
     "count": 3,
     "last_seen": "2025-05-22 16:53:03",
-    "rank": 1221
+    "rank": 1222
   },
   "0x959Fb5c95877c66F18B4Bccb56ca1e5C3DFB5244": {
     "name": "Smart Binance Token 3",
@@ -13546,7 +13558,7 @@
     "first_seen": "2025-05-22 16:13:16",
     "count": 3,
     "last_seen": "2025-05-22 16:21:05",
-    "rank": 1222
+    "rank": 1223
   },
   "0x8c553909B393095BF2769217E0d31f9E5278a38D": {
     "name": "Pancake LPs",
@@ -13557,7 +13569,7 @@
     "first_seen": "2025-05-22 16:13:41",
     "count": 3,
     "last_seen": "2025-05-22 16:13:41",
-    "rank": 1223
+    "rank": 1224
   },
   "0xd1AeC87EDE91e2bdb53033F56e9eAf476fafE64a": {
     "name": "Greenchie",
@@ -13568,7 +13580,7 @@
     "first_seen": "2025-05-22 16:15:00",
     "count": 3,
     "last_seen": "2025-05-22 16:49:51",
-    "rank": 1224
+    "rank": 1225
   },
   "0xD2e7B964770FCf51DF088a5F0Bb2D33a3c60CcCf": {
     "name": "Ispolink Token",
@@ -13579,7 +13591,7 @@
     "first_seen": "2025-05-22 16:15:44",
     "count": 3,
     "last_seen": "2025-05-22 16:19:57",
-    "rank": 1225
+    "rank": 1226
   },
   "0x33Bdf4De53cCe746dae1cE658c1e8cb2FFF05ae5": {
     "name": "Pancake LPs",
@@ -13590,7 +13602,7 @@
     "first_seen": "2025-05-22 16:16:21",
     "count": 3,
     "last_seen": "2025-05-22 16:16:21",
-    "rank": 1226
+    "rank": 1227
   },
   "0xcb5e6E276aDF62D68A1857880359750c8f79d076": {
     "name": "Mars",
@@ -13601,7 +13613,7 @@
     "first_seen": "2025-05-22 16:20:20",
     "count": 3,
     "last_seen": "2025-05-22 16:24:42",
-    "rank": 1227
+    "rank": 1228
   },
   "0xc4736F2611A62d545DC2D0d8f0766283617e6FcB": {
     "name": "TopGoal Token",
@@ -13612,7 +13624,7 @@
     "first_seen": "2025-05-22 16:20:34",
     "count": 3,
     "last_seen": "2025-05-22 16:24:28",
-    "rank": 1228
+    "rank": 1229
   },
   "0x8F4B5cc09d02524EBf35dCF2EAe68D1f863b887a": {
     "name": "Platform Token",
@@ -13623,7 +13635,7 @@
     "first_seen": "2025-05-22 16:23:23",
     "count": 3,
     "last_seen": "2025-05-22 16:47:52",
-    "rank": 1229
+    "rank": 1230
   },
   "0x46f69D955f6B1f358333B6253572859778539cB1": {
     "name": "revrevrevre",
@@ -13634,7 +13646,7 @@
     "first_seen": "2025-05-22 16:23:24",
     "count": 3,
     "last_seen": "2025-05-22 16:47:52",
-    "rank": 1230
+    "rank": 1231
   },
   "0xdDAD73DD8eBA0f8DC899d737532B964748AB4444": {
     "name": "₿",
@@ -13645,7 +13657,7 @@
     "first_seen": "2025-05-22 16:25:31",
     "count": 3,
     "last_seen": "2025-05-22 16:51:24",
-    "rank": 1231
+    "rank": 1232
   },
   "0xeF433eBb8bA7a486ce21B854f093b9A3f4e696bc": {
     "name": "TUK Token",
@@ -13656,7 +13668,7 @@
     "first_seen": "2025-05-22 16:28:13",
     "count": 3,
     "last_seen": "2025-05-22 16:28:13",
-    "rank": 1232
+    "rank": 1233
   },
   "0x88DB744Bc3e65F467b9210FF95E35a6a02474444": {
     "name": "BNBpizza",
@@ -13667,7 +13679,7 @@
     "first_seen": "2025-05-22 16:32:52",
     "count": 3,
     "last_seen": "2025-05-22 16:32:52",
-    "rank": 1233
+    "rank": 1234
   },
   "0x8EE943bab23C31de7164Ab8aB18a6eAa47f15478": {
     "name": "ParalUni pToken",
@@ -13678,7 +13690,7 @@
     "first_seen": "2025-05-22 16:34:16",
     "count": 3,
     "last_seen": "2025-05-22 16:34:17",
-    "rank": 1234
+    "rank": 1235
   },
   "0xBb87F2a37cf805E3755Cb1e7DA41140589190e25": {
     "name": "ParalUni Token V3",
@@ -13689,7 +13701,7 @@
     "first_seen": "2025-05-22 16:34:17",
     "count": 3,
     "last_seen": "2025-05-22 16:34:17",
-    "rank": 1235
+    "rank": 1236
   },
   "0x31aA09d92E5D1269B49E1e4A5D28c118C01b16d5": {
     "name": "Wether",
@@ -13700,7 +13712,7 @@
     "first_seen": "2025-05-22 16:34:18",
     "count": 3,
     "last_seen": "2025-05-22 16:34:18",
-    "rank": 1236
+    "rank": 1237
   },
   "0x32dFFc3fE8E3EF3571bF8a72c0d0015C5373f41D": {
     "name": "JULb",
@@ -13711,7 +13723,7 @@
     "first_seen": "2025-05-22 16:34:28",
     "count": 3,
     "last_seen": "2025-05-22 16:37:07",
-    "rank": 1237
+    "rank": 1238
   },
   "0xC6394f580157D7e8ae16f5fa1F8640d292EEDdB2": {
     "name": "OpenOcean LPs",
@@ -13722,7 +13734,7 @@
     "first_seen": "2025-05-22 16:35:42",
     "count": 3,
     "last_seen": "2025-05-22 16:35:42",
-    "rank": 1238
+    "rank": 1239
   },
   "0x92072F045D0904e9a0cDfD48519f54c83Bf41e82": {
     "name": "Mochi DeFi",
@@ -13733,7 +13745,7 @@
     "first_seen": "2025-05-22 16:36:37",
     "count": 3,
     "last_seen": "2025-05-22 16:36:37",
-    "rank": 1239
+    "rank": 1240
   },
   "0xEDd822B00c48D8A1C416ee17507bEFC2ad71d8c4": {
     "name": "My Shiba Inu",
@@ -13744,7 +13756,7 @@
     "first_seen": "2025-05-22 16:37:49",
     "count": 3,
     "last_seen": "2025-05-22 16:37:49",
-    "rank": 1240
+    "rank": 1241
   },
   "0xf741b2F9B1b7Cc050928609744AF69E436217eDc": {
     "name": "Robocop 2.0",
@@ -13755,7 +13767,7 @@
     "first_seen": "2025-05-22 16:39:04",
     "count": 3,
     "last_seen": "2025-05-22 16:39:05",
-    "rank": 1241
+    "rank": 1242
   },
   "0x79Ea5E6a6b28E09369214867160813f7DaC7CD59": {
     "name": "Eagle",
@@ -13766,7 +13778,7 @@
     "first_seen": "2025-05-22 16:39:22",
     "count": 3,
     "last_seen": "2025-05-22 16:39:22",
-    "rank": 1242
+    "rank": 1243
   },
   "0x6Cc517f10c35C057a6B0742ea6f87a19fc6f46B4": {
     "name": "XLF",
@@ -13777,7 +13789,7 @@
     "first_seen": "2025-05-22 16:40:07",
     "count": 3,
     "last_seen": "2025-05-22 16:40:07",
-    "rank": 1243
+    "rank": 1244
   },
   "0xEF2F2fF110A2522CF794a93808eBe6e2Ad2E4444": {
     "name": "Kim Jung Moon",
@@ -13788,7 +13800,7 @@
     "first_seen": "2025-05-24 13:13:43",
     "count": 3,
     "last_seen": "2025-05-24 13:14:14",
-    "rank": 1244
+    "rank": 1245
   },
   "0x4AFc8c2Be6a0783ea16E16066fde140d15979296": {
     "name": "Hare Token",
@@ -13799,7 +13811,7 @@
     "first_seen": "2025-05-24 13:14:45",
     "count": 3,
     "last_seen": "2025-05-24 13:14:45",
-    "rank": 1245
+    "rank": 1246
   },
   "0x4550003152F12014558e5CE025707E4DD841100F": {
     "name": "Kaizen.Finance",
@@ -13810,7 +13822,7 @@
     "first_seen": "2025-05-22 14:20:58",
     "count": 3,
     "last_seen": "2025-05-24 14:45:59",
-    "rank": 1246
+    "rank": 1247
   },
   "0x5DC965185b0dFb546e775bc328edA2E85754d48A": {
     "name": "EDEN COIN",
@@ -13821,7 +13833,7 @@
     "first_seen": "2025-05-22 14:22:26",
     "count": 3,
     "last_seen": "2025-05-24 14:44:20",
-    "rank": 1247
+    "rank": 1248
   },
   "0xCbFB0D98151D03eF8bB71fA668F57Df5E3fb4673": {
     "name": "Wrapped Dash",
@@ -13832,7 +13844,7 @@
     "first_seen": "2025-05-22 14:28:21",
     "count": 3,
     "last_seen": "2025-05-24 14:09:07",
-    "rank": 1248
+    "rank": 1249
   },
   "0x14778860E937f509e651192a90589dE711Fb88a9": {
     "name": "CyberConnect",
@@ -13843,7 +13855,7 @@
     "first_seen": "2025-05-22 14:28:23",
     "count": 3,
     "last_seen": "2025-05-24 14:04:57",
-    "rank": 1249
+    "rank": 1250
   },
   "0x83b37130B8F6A8eDD4e34C46A2FED1Ac281bFb05": {
     "name": "Max Property",
@@ -13854,7 +13866,7 @@
     "first_seen": "2025-05-22 14:31:26",
     "count": 3,
     "last_seen": "2025-05-24 14:07:27",
-    "rank": 1250
+    "rank": 1251
   },
   "0x057DEa748BF7AaE76998fE46a2379DE2f13f676d": {
     "name": "ВТСВ ",
@@ -13865,7 +13877,7 @@
     "first_seen": "2025-05-22 14:31:53",
     "count": 3,
     "last_seen": "2025-05-24 14:27:51",
-    "rank": 1251
+    "rank": 1252
   },
   "0xd0645265F10F24a14c867028a51927D37e7Ff670": {
     "name": "OB COIN",
@@ -13876,7 +13888,7 @@
     "first_seen": "2025-05-22 14:35:26",
     "count": 3,
     "last_seen": "2025-05-24 14:56:47",
-    "rank": 1252
+    "rank": 1253
   },
   "0x2cD128787D57F8F06c46015f20614c2ACF3E8561": {
     "name": "Pancake LPs",
@@ -13887,7 +13899,7 @@
     "first_seen": "2025-05-22 14:36:34",
     "count": 3,
     "last_seen": "2025-05-24 13:24:35",
-    "rank": 1253
+    "rank": 1254
   },
   "0x62D0A8458eD7719FDAF978fe5929C6D342B0bFcE": {
     "name": "Beam",
@@ -13898,7 +13910,7 @@
     "first_seen": "2025-05-22 14:39:14",
     "count": 3,
     "last_seen": "2025-05-24 13:48:32",
-    "rank": 1254
+    "rank": 1255
   },
   "0xB7E2713CF55cf4b469B5a8421Ae6Fc0ED18F1467": {
     "name": "OpenLeverage Token V2",
@@ -13909,7 +13921,7 @@
     "first_seen": "2025-05-22 15:03:39",
     "count": 3,
     "last_seen": "2025-05-24 13:26:17",
-    "rank": 1255
+    "rank": 1256
   },
   "0x344E20f46bC4814c491E44B7BAD27760E49d36C2": {
     "name": "CO2Capture",
@@ -13920,7 +13932,7 @@
     "first_seen": "2025-05-22 15:03:47",
     "count": 3,
     "last_seen": "2025-05-24 13:26:24",
-    "rank": 1256
+    "rank": 1257
   },
   "0xCdC3A010A3473c0C4b2cB03D8489D6BA387B83CD": {
     "name": "liveThe",
@@ -13931,7 +13943,7 @@
     "first_seen": "2025-05-22 15:22:49",
     "count": 3,
     "last_seen": "2025-05-24 14:55:33",
-    "rank": 1257
+    "rank": 1258
   },
   "0xD3CE692eF8B72f396b576c8D505327E08B519a4b": {
     "name": "DID",
@@ -13942,7 +13954,7 @@
     "first_seen": "2025-05-22 15:24:39",
     "count": 3,
     "last_seen": "2025-05-24 14:15:01",
-    "rank": 1258
+    "rank": 1259
   },
   "0x6412d6d655C769d8d0190563F1873C564221b741": {
     "name": "KIKKI",
@@ -13953,7 +13965,7 @@
     "first_seen": "2025-05-22 15:31:26",
     "count": 3,
     "last_seen": "2025-05-24 14:04:32",
-    "rank": 1259
+    "rank": 1260
   },
   "0x77087aB5Df23cFB52449A188e80e9096201c2097": {
     "name": "hi Dollar",
@@ -13964,7 +13976,7 @@
     "first_seen": "2025-05-22 15:40:04",
     "count": 3,
     "last_seen": "2025-05-24 14:41:21",
-    "rank": 1260
+    "rank": 1261
   },
   "0xFbF01979eC728e043EB988b9778F2fF974422963": {
     "name": "ONF Token",
@@ -13975,7 +13987,7 @@
     "first_seen": "2025-05-22 16:03:33",
     "count": 3,
     "last_seen": "2025-05-24 13:44:45",
-    "rank": 1261
+    "rank": 1262
   },
   "0x3F1d29b611c649eEC1e62bE2237891DD88E1aFe0": {
     "name": "Metavice",
@@ -13986,7 +13998,7 @@
     "first_seen": "2025-05-22 16:05:19",
     "count": 3,
     "last_seen": "2025-05-24 14:44:58",
-    "rank": 1262
+    "rank": 1263
   },
   "0xF258cC28500C301d14Be95271B2018E41d31C9B1": {
     "name": "1000X",
@@ -13997,7 +14009,7 @@
     "first_seen": "2025-05-22 16:06:10",
     "count": 3,
     "last_seen": "2025-05-24 13:21:00",
-    "rank": 1263
+    "rank": 1264
   },
   "0x0cc7288A11c0c31d39d0e05EB59F24e506ad6aD5": {
     "name": "Bridged EGP",
@@ -14008,7 +14020,7 @@
     "first_seen": "2025-05-22 16:06:32",
     "count": 3,
     "last_seen": "2025-05-24 14:08:38",
-    "rank": 1264
+    "rank": 1265
   },
   "0x56fA5F7BF457454Be33D8B978C86A5f5B9DD84C2": {
     "name": "Listapie",
@@ -14019,7 +14031,7 @@
     "first_seen": "2025-05-22 16:06:32",
     "count": 3,
     "last_seen": "2025-05-24 14:08:38",
-    "rank": 1265
+    "rank": 1266
   },
   "0x1B6Fdd9f94937B57Cf42571fF7E8508A5486c90C": {
     "name": "Trump Bucks",
@@ -14030,7 +14042,7 @@
     "first_seen": "2025-05-22 16:11:34",
     "count": 3,
     "last_seen": "2025-05-24 14:22:21",
-    "rank": 1266
+    "rank": 1267
   },
   "0x9AA0a9707d4cdC8D9801cD5Cb75C90998E5f4444": {
     "name": "Evie Pig",
@@ -14041,7 +14053,7 @@
     "first_seen": "2025-05-22 16:36:14",
     "count": 3,
     "last_seen": "2025-05-24 13:24:45",
-    "rank": 1267
+    "rank": 1268
   },
   "0xF0d65cE6f671813b1368A7D886f6764886A42EdE": {
     "name": "Tomato",
@@ -14052,7 +14064,7 @@
     "first_seen": "2025-05-22 14:27:30",
     "count": 3,
     "last_seen": "2025-05-24 13:27:34",
-    "rank": 1268
+    "rank": 1269
   },
   "0xe9A5C635c51002Fa5f377F956A8CE58573D63d91": {
     "name": "TETHEREUM",
@@ -14063,7 +14075,7 @@
     "first_seen": "2025-05-22 14:35:49",
     "count": 3,
     "last_seen": "2025-05-24 14:48:53",
-    "rank": 1269
+    "rank": 1270
   },
   "0x8457CA5040ad67fdebbCC8EdCE889A335Bc0fbFB": {
     "name": "AltLayer Token",
@@ -14074,7 +14086,7 @@
     "first_seen": "2025-05-22 14:40:56",
     "count": 3,
     "last_seen": "2025-05-24 13:54:40",
-    "rank": 1270
+    "rank": 1271
   },
   "0xd79eD92F32C728d7b189929BB26940c520CEa754": {
     "name": "BRISE_Dividend_Tracker",
@@ -14085,7 +14097,7 @@
     "first_seen": "2025-05-22 14:42:36",
     "count": 3,
     "last_seen": "2025-05-24 14:19:10",
-    "rank": 1271
+    "rank": 1272
   },
   "0x1Fd448D0361c3212961a70930f3129A45f425B68": {
     "name": "Marscoin",
@@ -14096,7 +14108,7 @@
     "first_seen": "2025-05-22 15:14:25",
     "count": 3,
     "last_seen": "2025-05-24 13:27:08",
-    "rank": 1272
+    "rank": 1273
   },
   "0xb43Ac9a81eDA5a5b36839d5b6FC65606815361b0": {
     "name": "Senspark",
@@ -14107,7 +14119,7 @@
     "first_seen": "2025-05-22 15:19:08",
     "count": 3,
     "last_seen": "2025-05-24 13:52:51",
-    "rank": 1273
+    "rank": 1274
   },
   "0x2CAF93D2E8991BD4C51435f4CD9B56F1a89B56E9": {
     "name": "Noracle",
@@ -14118,7 +14130,7 @@
     "first_seen": "2025-05-22 15:53:42",
     "count": 3,
     "last_seen": "2025-05-24 14:28:18",
-    "rank": 1274
+    "rank": 1275
   },
   "0xBA5686A12f91f0706BAEfd166a851C16480b279b": {
     "name": "KatyMEME.com",
@@ -14129,7 +14141,7 @@
     "first_seen": "2025-05-22 16:01:03",
     "count": 3,
     "last_seen": "2025-05-24 13:42:55",
-    "rank": 1275
+    "rank": 1276
   },
   "0xf8fcA402aE0c52116e042112eDadea9d683D6097": {
     "name": "OpenStake",
@@ -14140,7 +14152,7 @@
     "first_seen": "2025-05-22 16:42:14",
     "count": 3,
     "last_seen": "2025-05-24 14:14:43",
-    "rank": 1276
+    "rank": 1277
   },
   "0x37fcA9093c2d10E16fEC8a282faae90f6Dae1447": {
     "name": "INFINITAR",
@@ -14151,7 +14163,7 @@
     "first_seen": "2025-05-22 16:49:31",
     "count": 3,
     "last_seen": "2025-05-24 14:24:54",
-    "rank": 1277
+    "rank": 1278
   },
   "0xB6fF5419288A340be9eeb63D61c1FC142deeb3b6": {
     "name": "MATT",
@@ -14162,7 +14174,7 @@
     "first_seen": "2025-05-22 16:50:01",
     "count": 3,
     "last_seen": "2025-05-24 13:24:55",
-    "rank": 1278
+    "rank": 1279
   },
   "0x52CE071Bd9b1C4B00A0b92D298c512478CaD67e8": {
     "name": "Compound Coin",
@@ -14173,7 +14185,7 @@
     "first_seen": "2025-05-22 16:52:48",
     "count": 3,
     "last_seen": "2025-05-24 15:01:57",
-    "rank": 1279
+    "rank": 1280
   },
   "0xE3D2E952BdEDfc7886beF4430f72FA8F67D0dE0e": {
     "name": "Vitalik Milady",
@@ -14184,7 +14196,7 @@
     "first_seen": "2025-05-24 13:14:55",
     "count": 3,
     "last_seen": "2025-05-24 15:02:42",
-    "rank": 1280
+    "rank": 1281
   },
   "0xD1BAfF08684B85DD670519E8F4bF2014314ED0E0": {
     "name": "LanLan Cat",
@@ -14195,7 +14207,7 @@
     "first_seen": "2025-05-24 13:14:56",
     "count": 3,
     "last_seen": "2025-05-24 13:46:20",
-    "rank": 1281
+    "rank": 1282
   },
   "0xc0E6AD13BD58413Ed308729b688d601243E1CF77": {
     "name": "Black Whale Token",
@@ -14206,7 +14218,7 @@
     "first_seen": "2025-05-24 13:21:11",
     "count": 3,
     "last_seen": "2025-05-24 13:21:12",
-    "rank": 1282,
+    "rank": 1283,
     "is_lp": false
   },
   "0xC9b91d8ACA94Af9558B1CccD82C3b72cfDDdb196": {
@@ -14218,7 +14230,7 @@
     "first_seen": "2025-05-24 13:22:06",
     "count": 3,
     "last_seen": "2025-05-24 15:02:42",
-    "rank": 1283,
+    "rank": 1284,
     "is_lp": false
   },
   "0xe8E4D747DbEFfAF78F8e0fe67BC6BE90ced0377F": {
@@ -14230,7 +14242,7 @@
     "first_seen": "2025-05-24 13:22:08",
     "count": 3,
     "last_seen": "2025-05-24 13:45:06",
-    "rank": 1284,
+    "rank": 1285,
     "is_lp": true
   },
   "0x1446AcC4d5C0d195457568dd4FD5fc8Dc5c4BfDD": {
@@ -14242,7 +14254,7 @@
     "first_seen": "2025-05-24 13:22:33",
     "count": 3,
     "last_seen": "2025-05-24 13:22:33",
-    "rank": 1285,
+    "rank": 1286,
     "is_lp": false
   },
   "0x551897f8203bd131b350601D3aC0679Ba0Fc0136": {
@@ -14254,7 +14266,7 @@
     "first_seen": "2025-05-24 13:22:45",
     "count": 3,
     "last_seen": "2025-05-24 13:54:59",
-    "rank": 1286,
+    "rank": 1287,
     "is_lp": false
   },
   "0xe98EFe4e566126BF09cF5b6170DD30B22A222825": {
@@ -14266,7 +14278,7 @@
     "first_seen": "2025-05-24 13:23:05",
     "count": 3,
     "last_seen": "2025-05-24 13:33:19",
-    "rank": 1287,
+    "rank": 1288,
     "is_lp": false
   },
   "0x92627C455652Fad0fFFaBDF61f71a7455c333274": {
@@ -14278,7 +14290,7 @@
     "first_seen": "2025-05-24 13:26:19",
     "count": 3,
     "last_seen": "2025-05-24 14:23:10",
-    "rank": 1288,
+    "rank": 1289,
     "is_lp": false
   },
   "0x68C0Ffcd03EBF270De02a043BB90D0276182ec0D": {
@@ -14290,7 +14302,7 @@
     "first_seen": "2025-05-24 13:27:06",
     "count": 3,
     "last_seen": "2025-05-24 13:27:06",
-    "rank": 1289,
+    "rank": 1290,
     "is_lp": false
   },
   "0x915424Ac489433130d92B04096F3b96c82e92a9D": {
@@ -14302,18 +14314,6 @@
     "first_seen": "2025-05-24 13:28:32",
     "count": 3,
     "last_seen": "2025-05-24 14:00:54",
-    "rank": 1290,
-    "is_lp": false
-  },
-  "0xafC52eb6f9b2C68D1e06e0B822F6CB9244D14B50": {
-    "name": "IndoCrypt Token",
-    "symbol": "ICT",
-    "decimals": 18,
-    "total_supply": "50000000000000000000000000",
-    "address": "0xafC52eb6f9b2C68D1e06e0B822F6CB9244D14B50",
-    "first_seen": "2025-05-24 13:30:48",
-    "count": 3,
-    "last_seen": "2025-05-24 14:44:43",
     "rank": 1291,
     "is_lp": false
   },
