@@ -115,12 +115,39 @@ def get_pool_fees(token0_address, token1_address, fee, days=7):
 
     # 计算区块范围
     end_block = w3.eth.block_number
-    # BSC每3秒一个区块
-    blocks_per_day = (60 * 60 * 24) // 3  # 每天28800个区块
-    start_block = end_block - (blocks_per_day * days)
+    end_block_data = w3.eth.get_block(end_block)
+    end_time = datetime.fromtimestamp(end_block_data.timestamp)
     
-    print(f"开始区块: {start_block}")
-    print(f"结束区块: {end_block}")
+    # 计算开始时间（24小时前）
+    start_time = end_time - timedelta(days=days)
+    
+    # 二分查找开始区块
+    left = end_block - 28800 * days * 2  # 预估最小区块
+    right = end_block
+    start_block = None
+    
+    while left <= right:
+        mid = (left + right) // 2
+        mid_block_data = w3.eth.get_block(mid)
+        mid_time = datetime.fromtimestamp(mid_block_data.timestamp)
+        
+        if abs((mid_time - start_time).total_seconds()) < 60:  # 允许1分钟的误差
+            start_block = mid
+            break
+        elif mid_time < start_time:
+            left = mid + 1
+        else:
+            right = mid - 1
+    
+    if start_block is None:
+        start_block = left
+    
+    # 获取区块时间戳
+    start_block_data = w3.eth.get_block(start_block)
+    start_time = datetime.fromtimestamp(start_block_data.timestamp)
+    
+    print(f"开始区块: {start_block} (时间: {start_time.strftime('%Y-%m-%d %H:%M:%S')})")
+    print(f"结束区块: {end_block} (时间: {end_time.strftime('%Y-%m-%d %H:%M:%S')})")
     print(f"区块范围: {end_block - start_block}")
 
     # 将区块范围分成多个小段，每段最多50000个区块
