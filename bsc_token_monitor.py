@@ -59,6 +59,31 @@ ERC20_ABI = json.loads('''[
     }
 ]''')
 
+# PancakeSwap LP Token ABI
+LP_TOKEN_ABI = json.loads('''[
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "token0",
+        "outputs": [{"name": "", "type": "address"}],
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "token1",
+        "outputs": [{"name": "", "type": "address"}],
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "factory",
+        "outputs": [{"name": "", "type": "address"}],
+        "type": "function"
+    }
+]''')
+
 # 已知的主要代币地址
 KNOWN_TOKENS = {
 }
@@ -76,6 +101,31 @@ def load_existing_data():
             discovered_tokens = json.load(f)
     except FileNotFoundError:
         discovered_tokens = {}
+
+def is_lp_token(token_address: str) -> bool:
+    """
+    检查是否是LP代币
+    """
+    try:
+        # 创建合约实例
+        contract = w3.eth.contract(
+            address=Web3.to_checksum_address(token_address),
+            abi=LP_TOKEN_ABI
+        )
+        
+        # 尝试调用LP代币特有的函数
+        try:
+            token0 = contract.functions.token0().call()
+            token1 = contract.functions.token1().call()
+            factory = contract.functions.factory().call()
+            
+            # 如果能够成功获取这些值，说明是LP代币
+            return True
+        except:
+            return False
+            
+    except:
+        return False
 
 def get_token_info(token_address: str) -> Dict:
     """
@@ -109,6 +159,14 @@ def get_token_info(token_address: str) -> Dict:
         except:
             total_supply = 0
 
+        # 检查是否是LP代币
+        is_lp = is_lp_token(token_address)
+        
+        # 如果名称或符号中包含LP相关字样，也标记为LP代币
+        if not is_lp:
+            lp_keywords = ['LP', 'Liquidity', 'Liquidity Provider']
+            is_lp = any(keyword in name.upper() or keyword in symbol.upper() for keyword in lp_keywords)
+
         return {
             "name": name,
             "symbol": symbol,
@@ -118,7 +176,8 @@ def get_token_info(token_address: str) -> Dict:
             "first_seen": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             "count": 1,  # 初始化为1，因为发现时就是第一次出现
             "last_seen": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            "rank": 0  # 初始排名为0
+            "rank": 0,  # 初始排名为0
+            "is_lp": is_lp  # 添加LP标记
         }
     except Exception as e:
         print(f"获取代币信息失败 {token_address}: {str(e)}")
@@ -155,6 +214,7 @@ def process_transaction(tx_hash: str):
                         print(f"总供应量: {token_info['total_supply']}")
                         print(f"首次发现时间: {token_info['first_seen']}")
                         print(f"出现次数: 1")
+                        print(f"类型: {'LP代币' if token_info['is_lp'] else '普通代币'}")
                         print("-" * 50)
 
                         # 保存到文件
